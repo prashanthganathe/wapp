@@ -1,0 +1,147 @@
+1. Wapp logo
+2. Consultancy Item lists: cloud , .net, web, DDD, Architecture, Hybrid mobile, web sites , mobile apps
+3. clients
+4. Review Documents, attributes
+5. Prof: startups-non IT, lawyers, doctors, consultants, real estate, interior designer, small scale industries, dental clinic, 		boutiques,
+6. Android apps,Ios Apps
+7. App inventor: Groupy. (Mobile), anyone
+8. Blog
+9. FB followers.
+
+20K+60K package. (web application + deployment +android app) + extra (domain name,  hosting+ email, sms)
+             (20 days)
+10+15K  Package ( web application + deployement)
+	     (10 days)
+
+
+===========================================
+Enterprise Software Architecting 
+Architectural Consulting
+Project Design
+Analyzing and enhancing code in legacy applications.
+Enterprise Web Solutions
+
+
+
+.Net Technologies
+===================
+MVC
+Web Api
+Signal R
+Web Forms
+Windows Service
+Windows Apps
+
+Cloud
+===============
+AWS
+Azure
+Cloud Migration
+Cloud Security
+Cloud Architecture Review
+
+Mobile
+====================
+Native Mobile Apps
+Hybrid Mobile Apps
+
+Services
+============
+REST
+Microservice
+
+
+Technology Roadmap
+========================
+
+
+Project Reveiw Attributes
+================
+Estimations
+  Knowns and unknowns
+  Knowledge
+  Intelligence
+  Experience
+  Intuition
+
+Critical Path
+    Dependency tree
+    Non-code activities
+    effort estimation per activity
+    Critical path diagram
+
+Resources and Scheduling
+    Available Resources
+    Unavailable Resources
+  
+
+Time cost curves
+Roles and Responsibilities
+Visibility
+Risk
+Concerns and Issues
+Technology
+Reducing cost
+
+
+User Journey
+======================
+
+
+
+==================
+MicroService ( More SOLID Principle)
+Automation is important for MicroServices
+
+Post continuous delivery SOA
+fine-grained domain capability
+(domain capability, product catalog,)
+Independently releasble
+Lang agnostic integration
+=============
+what not
+============
+Monolithic
+Not layered
+========
+Why
+=========
+Autonomy with responsibility
+Speed of change
+scale
+innovation composability
+Tech diversivation
+===============
+
+
+
+
+
+Tools
+===============
+ndepend
+Structure 101
+FxCop
+
+
+Build=>Test=>Consumer Test=>Acceptance Test=> Production
+
+ US
+slide-home-10
+Who we are
+allAlgos IT Solutions is an IT consulting and services provider, providing end-to-end consulting for global clients providing full-cycle services in areas of custom web design, web development, mobile app development, SEO, hosting & support. Based on a productive, transparent, and intuitive process, our project execution methodology ensures that we deliver a formidable final product. Combining our solid business domain experience, technical expertise, profound knowledge of latest industry trends and quality-driven delivery model we offer progressive end-to-end solutions.
+ 
+allAlgos IT Solutions was set up in 2014 and has worked with more than 100 different clients from different parts of the globe which includes North America, Europe and Australia.
+allAlgos has a focused service offering in social networking, eCommerce, real estate, e-learning and learning management system (LMS), daily deals and group buying applications, SAAS, CRM, ERP, Smartphone applications, desktop applications, migration, search engine creation. We have expertise across business domains and we have a long list of satisfied customers. We have significant depth of expertise and experience in delivering Web, Desktop and Smartphone based technology solutions to our clients across industries. Our structured, project execution methodologies further enhance our ability to consistently deliver best of breed solutions to our clients.
+ 
+allAlgos provides an equal opportunity to everyone with an environment that allows them to grow and learn. Our unique and simple work culture endorses creativity and teamwork, and also encourages our employees to keep up a healthy work and life balance. We frequently update our employees with new technologies that can help them to learn more. We develop distinctive and exceptional solutions that help our clients to take complete control over online business in real time.
+Web application
+Mobile Websites
+
+
+
+
+
+
+
+             
