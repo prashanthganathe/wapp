@@ -5,6 +5,7 @@ accounts-oauth@1.1.11
 accounts-password@1.1.7
 accounts-ui@1.1.8
 accounts-ui-unstyled@1.1.11
+ajduke:bootstrap-tagsinput@0.7.0
 alanning:roles@1.2.15
 alanning:trace@0.0.2
 aldeed:collection2@2.9.1
@@ -124,6 +125,7 @@ srp@1.0.7
 standard-minifier-css@1.0.5
 standard-minifier-js@1.0.5
 stevezhu:fbgraph@2.0.0
+summernote:summernote@0.8.1
 templating@1.1.8
 templating-tools@1.0.3
 themeteorchef:jquery-validation@1.14.0

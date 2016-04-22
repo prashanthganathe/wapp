@@ -75,3 +75,5 @@ percolatestudio:synced-cron
 npm-container
 isotope:isotope
 altapp:recaptcha
+ajduke:bootstrap-tagsinput
+summernote:summernote
