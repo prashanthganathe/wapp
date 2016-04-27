@@ -1,1 +1,7 @@
 /* Add here all your CSS customizations */
+.bootstrap-tagsinput .tag {
+    margin-right: 2px;
+    color: white;
+    background-color: #5bc0de;
+
+}

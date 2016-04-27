@@ -131,13 +131,13 @@ FlowRouter.route('/faq', {
         }
     });*/
 
- FlowRouter.route('/blogpost', {
+/* FlowRouter.route('/blogpost', {
         action: function() {
             BlazeLayout.render('mainlayout', {
                 content: 'blogpost'
             });
         }
-    });
+    });*/
 
   FlowRouter.route('/login', {
         action: function() {
@@ -179,4 +179,32 @@ FlowRouter.route('/faq', {
             });
         }
     });
+
+    FlowRouter.route('/blogcreated', {
+        action: function() {
+            BlazeLayout.render('mainlayout', {
+                content: 'blogcreated'
+            });
+        }
+    });
+
+    FlowRouter.route('/blogpost/:postId', {
+        action: function(params,queryparams) {           
+            console.log(params.postId);
+            BlazeLayout.render('mainlayout', {
+                content: 'blogpost'
+            });
+        }
+    });
+
+    FlowRouter.route('/userlist', {
+        action: function() {
+            BlazeLayout.render('mainlayout', {
+                content: 'userlist'
+            });
+        }
+    });
+
+
+
 

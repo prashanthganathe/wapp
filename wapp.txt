@@ -1,3 +1,15 @@
+
+http://sergelobatch.com/slog/2015/4/10/using-mup/
+1.npm install -g mup
+2. project directory: mup init
+3. update mup.json and setting.json
+4. client: mup setup
+5. client: mup deploy
+
+    
+
+
+
 1. Wapp logo
 2. Consultancy Item lists: cloud , .net, web, DDD, Architecture, Hybrid mobile, web sites , mobile apps
 3. clients
@@ -138,7 +150,7 @@ allAlgos provides an equal opportunity to everyone with an environment that allo
 Web application
 Mobile Websites
 
-
+./mongodump --host <your server ip address> --username <username> --password <password>
 
 
 
