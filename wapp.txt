@@ -5,9 +5,27 @@ http://sergelobatch.com/slog/2015/4/10/using-mup/
 3. update mup.json and setting.json
 4. client: mup setup
 5. client: mup deploy
+==========
+Mup error
+Reboot
+check
+ 1. "ps aux | grep mongod" if this is not running , reboot
+ 2. "sudo mongod &"
+ 3.sudo mkdir -p /data/db/
+ 4.sudo chown `id -u` /data/db
 
+5.  mongod &
+
+if
+ERROR: Insufficient free space for journal files
+//mongod --dbpath /data/db --smallfiles
+mongod --smallfiles
     
+================
+sudo adduser wappadmin
+sudo visudo
 
+node- v
 
 
 1. Wapp logo
