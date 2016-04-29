@@ -1,13 +1,42 @@
-
 Template.register.events({
-    'submit form': function(event){
-        event.preventDefault();
-        var email = $('#email').val();
-        var password = $('#password').val();
+            'submit form': function(event) {
 
-        Accounts.createUser({
-            email: email,
-            password: password
-        });
-    }
-});
+              //  var data, validationErrors;
+
+                event.preventDefault();
+               // data = userInputParse($(event.target));
+               // validationErrors = userObjectValidate(data);
+
+
+                var email = $('#email').val();
+                var password = $('#password').val();
+                var data={};
+                data.email=email;
+                data.password=password;
+                data.username=email;
+                data.profile={};
+
+                 Meteor.call('createUserNoRole', data, function(error, result) {
+                    if(error)
+                    {
+
+                    }
+                    else
+                    {
+                        console.log('created successfully');
+                    }
+                 });
+
+               /* Accounts.createUser({
+     username: email,
+     email: email,
+     password: password,
+     profile: {
+         //publicly visible fields like firstname goes here
+     }
+
+ });
+*/
+            }
+
+            });

@@ -1,3 +1,45 @@
+sudo nohup meteor --port 80 --production &
+
+ps aux|grep meteor
+ sudo kill -9 1348
+
+
+ps -ef |grep nohup 
+
+==============================
+mongo shell --port 81
+user meteor
+show collections
+
+db.blog.find({})
+
+
+
+installig git in ubuntu
+
+curl https://install.meteor.com/ | sh
+=========================
+sudo apt-get update
+sudo apt-get install git
+========================
+copying folder
+
+cp -a /path/from /path/to
+cp -a wapp wapp-prod
+===================
+installing npm
+ sudo apt-get install npm
+======================
+ sudo npm install -g mupx
+ sudo mupx init
+
+
+remove non-empty directory
+==========================
+sudo rm -rf folderName
+
+
+======================================================================================
 
 http://sergelobatch.com/slog/2015/4/10/using-mup/
 1.npm install -g mup
@@ -21,13 +63,18 @@ ERROR: Insufficient free space for journal files
 //mongod --dbpath /data/db --smallfiles
 mongod --smallfiles
     
-================
+
+Check if the lock file exists:
+# ls  -lisa /var/lib/mongodb
+If it does, stop mongodb.service, and delete the file. Then start the service again.
+# rm /var/lib/mongodb/mongod.lock
+=====================================
 sudo adduser wappadmin
 sudo visudo
 
 node- v
 
-
+===============================================================================
 1. Wapp logo
 2. Consultancy Item lists: cloud , .net, web, DDD, Architecture, Hybrid mobile, web sites , mobile apps
 3. clients

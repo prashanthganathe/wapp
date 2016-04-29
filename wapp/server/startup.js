@@ -1,11 +1,11 @@
 Meteor.startup(function() {
     reCAPTCHA.config({
-       privatekey: '6LcTeRsTAAAAAM1nFrufK_6zt-NcpYhWElZh0qSQ'
+       privatekey: '6LdtpB4TAAAAABhd37w7ygRLlIiidAeH5jVIMLoq'
     });
 });
 
 
-//domain:  6LcTeRsTAAAAAM1nFrufK_6zt-NcpYhWElZh0qSQ
+//local:  6LdtpB4TAAAAABhd37w7ygRLlIiidAeH5jVIMLoq
 
 
- //localhost: '6LcTeRsTAAAAAPV6p3TfUkBJfjHRAknhsqR-vUUt'
+ //localhost: '6LcnpR4TAAAAAP1fXO_UYyGTDEwR0JduLLhdf3CY'

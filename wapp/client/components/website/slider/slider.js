@@ -1,19 +1,35 @@
-Template.slider.onRendered(function () {
-  /*  if($(".modal").length>0) {
-        $(".modal").each(function() {
-            $(".modal").prependTo( "body" );
-        });
-    }*/
-  //  alert('from onrendered');
+Template.slider.onRendered(function() {
+    $("#carousel").flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: true,
+        slideshow: true,
+        itemWidth: 210,
+        itemMargin: 5,
+        asNavFor: "#slider"
+    });
+
+    $("#slider").flexslider({
+        animation: "slide",
+        controlNav: true,
+        animationLoop: true,
+        slideshow: true,
+        sync: "#carousel"
+    });
+
 });
 
 
 
 Template.slider.helpers({
     sliders: function() {
-       /* return _.map(HomepageSliders.find({}, {fields: {url:1, client_name:1}}).fetch(), function(val, index) {
-            return {value: val, active: (index == 0 ? "item active" : "item")} 
-        });*/
-        return [{'a':'a'}]
+
+        return ['../website/img/slides/slide-corporate-1.jpg',
+            '../website/img/slides/slide-corporate-2.jpg',
+            '../website/img/slides/slide-corporate-law-office-1.jpg'
+           
+
+
+        ];
     }
 });
