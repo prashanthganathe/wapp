@@ -14,9 +14,10 @@ Template.register.events({
                 data.email=email;
                 data.password=password;
                 data.username=email;
-                data.profile={};
+                data.profile={'name':$('#name').val()};
+                var roles=['user'];
 
-                 Meteor.call('createUserNoRole', data, function(error, result) {
+                 Meteor.call('createUserWithRole', data,roles, function(error, result) {
                     if(error)
                     {
 

@@ -1,14 +1,12 @@
 <template name="header">
-    <header class="navbar  navbar-default navbar-fixed-top" role="banner"
-
-     id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": true}'>
+    <header class="navbar  navbar-default navbar-fixed-top" role="banner" id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": true}'>
         <div class="header-body">
             <div class="header-container container">
                 <div class="header-row">
                     <div class="header-column">
                         <div class="header-logo">
                             <a href="#">
-                                <img alt="Wapp" width="111" height="54" data-sticky-width="82" data-sticky-height="40" data-sticky-top="33"  src="../website/img/wapplogo.png">
+                                <img alt="Wapp" width="111" height="54" data-sticky-width="82" data-sticky-height="40" data-sticky-top="33" src="../website/img/wapplogo.png">
                             </a>
                         </div>
                     </div>
@@ -27,7 +25,9 @@
                             <nav class="header-nav-top">
                                 <ul class="nav nav-pills">
                                     <li>
-                                        <!-- class="hidden-xs" -->
+                                        <a href="/"><i class="fa fa-angle-right"></i> Home</a>
+                                    </li>
+                                    <li>
                                         <a href="team"><i class="fa fa-angle-right"></i> Team</a>
                                     </li>
                                     <li>
@@ -64,14 +64,11 @@
                                 <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
                                     <nav class="header-nav-main" role="navigation">
                                         <ul class="nav nav-pills" id="mainNav">
-                                            <li class="dropdown active">
-                                                <a class="dropdown-toggle" href="/">Home</a>
-                                            </li>
-                                          	 {{> technologylist}} 
-                                           	 {{> highservicelist}}
+                                            {{> technologylist}} 
+                                            {{> highservicelist}}
                                             <!-- {{> netservicelist}} -->
                                             {{> webservicelist}}
-                                          	 {{> startupservicelist}}
+                                            {{> startupservicelist}} 
                                             {{> lablist}}
                                             <!-- <li class="dropdown dropdown-mega">
 														<a class="dropdown-toggle" href="#">

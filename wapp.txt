@@ -6,6 +6,8 @@ ps aux|grep meteor
 
 ps -ef |grep nohup 
 
+//current mongod listening port
+sudo lsof -iTCP -sTCP:LISTEN | grep mongo
 ==============================
 mongo shell --port 81
 user meteor

@@ -1,52 +1,95 @@
 <template name="register">
-
-<form  method="POST" enctype="multipart/form-data">
-				<div class="featured-box featured-box-primary align-left mt-xlg" style="height: 327px;">
-											<div class="box-content">
-												<h4 class="heading-primary text-uppercase mb-md">Register An Account</h4>
-												<form    method="POST" enctype="multipart/form-data">
-													<div class="row">
-														<div class="form-group">
-															<div class="col-md-12">
-																<label>E-mail Address</label>
-																<div class="input-group input-group-icon">
-																<span class="input-group-addon">
+    <div role="main" class="main">
+        <section class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Home</a></li>
+                            <li class="active">Pages</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Register</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="featured-boxes">
+                        <div class="row">
+                          <div class="col-sm-6 col-sm-offset-3">
+                                <form method="POST" enctype="multipart/form-data">
+                                    <div class="featured-box featured-box-primary align-left mt-xlg" style="height: 430px;">
+                                        <div class="box-content">
+                                            <h4 class="heading-primary text-uppercase mb-md">Register An Account</h4>
+                                            <form method="POST" enctype="multipart/form-data">
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <label>Name</label>
+                                                            <div class="input-group input-group-icon">
+                                                                <span class="input-group-addon">
 																	<span class="icon"><i class="fa fa-user"></i></span>
-																</span>
-																<input type="email" name="email" id="email" value="" class="form-control input-lg" placeholder="Email" required>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="form-group">
-															<div class="col-md-6">
-																<label>Password</label>
-																<div class="input-group input-group-icon">
-																<span class="input-group-addon">
+                                                                </span>
+                                                                <input type="text" name="emnameail" id="name" value="" class="form-control input-lg" placeholder="Name" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <label>E-mail Address</label>
+                                                            <div class="input-group input-group-icon">
+                                                                <span class="input-group-addon">
+																	<span class="icon"><i class="fa fa-user"></i></span>
+                                                                </span>
+                                                                <input type="email" name="email" id="email" value="" class="form-control input-lg" placeholder="Email" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <div class="col-md-6">
+                                                            <label>Password</label>
+                                                            <div class="input-group input-group-icon">
+                                                                <span class="input-group-addon">
 																	<span class="icon"><i class="fa fa-key"></i></span>
-																</span>
-																<input type="password" name="password" value="" id="password" placeholder="Password" class="form-control input-lg" required>
-																</div>
-															</div>
-															<div class="col-md-6">
-																<label>Re-enter Password</label>
-																<div class="input-group input-group-icon">
-																<span class="input-group-addon">
+                                                                </span>
+                                                                <input type="password" name="password" value="" id="password" placeholder="Password" class="form-control input-lg" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label>Re-enter Password</label>
+                                                            <div class="input-group input-group-icon">
+                                                                <span class="input-group-addon">
 																	<span class="icon"><i class="fa fa-key"></i></span>
-																</span>
-																<input type="password" value="" id="confirmpassword" class="form-control input-lg" required>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-md-12">
-															<input type="submit" value="Register" class="btn btn-primary pull-right mb-xl" data-loading-text="Loading...">
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-</form>
+                                                                </span>
+                                                                <input type="password" value="" id="confirmpassword" class="form-control input-lg" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <input type="submit" value="Register" class="btn btn-primary pull-right mb-xl" data-loading-text="Loading...">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>

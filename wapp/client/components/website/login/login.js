@@ -10,6 +10,7 @@ Template.login.events({
         }
         else
         {
+            FlowRouter.go('/createpost');
 
         }
     });

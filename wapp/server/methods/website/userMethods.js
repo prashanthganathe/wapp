@@ -51,11 +51,21 @@ Meteor.methods({
     },
     'createUserNoRole': function(data) {
         //Do server side validation
-        return Accounts.createUser({
+        
+        var user= Accounts.createUser({
             email: data.email,
+            username: data.email,
             password: data.password,
             profile: data.profile
         });
+
+        console.log(user);
+
+        Meteor.users.update(user._id, {
+            $set: { "emails[0]verified": true }
+        });
+
+        return user;
     }
 
 

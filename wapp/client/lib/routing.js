@@ -146,6 +146,13 @@ FlowRouter.route('/faq', {
             });
         }
     });
+  FlowRouter.route('/register', {
+        action: function() {
+            BlazeLayout.render('mainlayout', {
+                content: 'register'
+            });
+        }
+    });
 
   FlowRouter.route('/forgotpassword', {
         action: function() {
@@ -201,6 +208,14 @@ FlowRouter.route('/faq', {
         action: function() {
             BlazeLayout.render('mainlayout', {
                 content: 'userlist'
+            });
+        }
+    });
+
+    FlowRouter.route('/admindashboard', {
+        action: function() {
+            BlazeLayout.render('mainlayout', {
+                content: 'admindashboard'
             });
         }
     });

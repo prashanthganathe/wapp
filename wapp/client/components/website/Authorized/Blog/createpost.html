@@ -1,4 +1,5 @@
 <template name="createpost">
+    {{#if isInRole 'editor,admin'}}
     <div role="main" class="main">
         <section class="page-header">
             <div class="container">
@@ -42,8 +43,6 @@
                                         <input name="tags" id="tags-input" data-role="tagsinput" data-tag-class="label label-primary tags" class="form-control tags" style="min-width: 100%;" value="Cloud, Mobile" />
                                     </div>
                                 </div>
-
-
                                 <div class="form-group">
                                     <label for="tags-input" class="col-md-2 control-label">Content</label>
                                     <div class="col-md-9">
@@ -52,16 +51,12 @@
                                         </p>
                                     </div>
                                 </div>
-
                                 <div class="form-group">
                                     <label for="tags-input" class="col-md-2 control-label">Snippet</label>
                                     <div class="col-md-9">
-                                        <textarea id="snippet" class="form-control" rows="4" cols="100"></textarea>                                      
+                                        <textarea id="snippet" class="form-control" rows="4" cols="100"></textarea>
                                     </div>
                                 </div>
-
-
-
                                 <div class="form-group">
                                     <label for="tags-input" class="col-md-2 control-label"></label>
                                     <div class="col-md-3">{{> reCAPTCHA}}</div>
@@ -79,4 +74,7 @@
             </div>
         </div>
     </div>
+    {{else}} 
+        {{> contactadmin}} 
+    {{/if}}
 </template>
