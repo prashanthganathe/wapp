@@ -24,9 +24,10 @@ Template.slider.onRendered(function() {
 Template.slider.helpers({
     sliders: function() {
 
-        return ['../website/img/slides/slide-corporate-1.jpg',
-            '../website/img/slides/slide-corporate-2.jpg',
-            '../website/img/slides/slide-corporate-law-office-1.jpg'
+        return [
+            '../website/img/slides/slide-corporate-8.jpg',
+            '../website/img/slides/slide-corporate-3.jpg'
+           
            
 
 
