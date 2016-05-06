@@ -1,5 +1,10 @@
 sudo nohup meteor --port 80 --production &
 
+
+sudo nohup sh run.sh &
+MONGO_URL=mongodb://0.0.0.0:27017/wapp meteor --port 80 --production
+
+
 ps aux|grep meteor
  sudo kill -9 1348
 

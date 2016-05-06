@@ -4519,3 +4519,7 @@ hr.small {
     border: 0;
     border-top: 2px solid #333333;
 }
+
+.flexslider {
+    margin: 0px 0 28px;
+}

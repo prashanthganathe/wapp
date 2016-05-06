@@ -1,0 +1,86 @@
+<template name="editpost">
+<!--  {{#if isInRole 'editor,admin'}} -->
+    <div role="main" class="main">
+        <section class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Home</a></li>
+                            <li class="active">Edit Post</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Edit Post</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+     
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            <div class="panel-actions">
+                                <a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
+                                <a href="#" class="panel-action panel-action-dismiss" data-panel-dismiss></a>
+                            </div>
+                            <h2 class="panel-title"><strong>Edit Post</strong></h2>
+                        </header>
+                        <div class="panel-body">
+                            <form class="form-horizontal form-bordered" method="get">
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="inputSuccess">Title</label>
+                                    <div class="col-md-9">
+                                        <input id="title" class="form-control input-lg mb-md" type="text" placeholder="Title" >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tags-input" class="col-md-2 control-label">Category / Tags</label>
+                                    <div class="col-md-9">
+                                        <input name="tags" id="tags-input" data-role="tagsinput" data-tag-class="label label-primary tags" class="form-control tags" style="min-width: 100%;" value="{{getStuff}}"   />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tags-input" class="col-md-2 control-label">Content</label>
+                                    <div class="col-md-9">
+                                        <div id="summernote" style="min-height:400px;">{{content}}</div>
+                                        <p>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tags-input" class="col-md-2 control-label">Snippet</label>
+                                    <div class="col-md-9">
+                                        <textarea id="snippet" class="form-control" rows="4" cols="100" ></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tags-input" class="col-md-2 control-label"></label>
+                                    <div class="col-md-3">
+                                    {{> reCAPTCHA}}</div>
+                                    <div class="col-md-3">
+                                        <input type="submit" id="btndraft" value="Save Draft" class="btn btn-primary btn-lg pull-right" data-loading-text="Loading...">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="submit" id="btnpublish" value="Publish Post" class="btn btn-success btn-lg pull-right" data-loading-text="Loading...">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+       
+    </div>
+  <!--   {{else}} 
+        {{> contactadmin}} 
+    {{/if}} -->
+</template>

@@ -44,13 +44,45 @@ Meteor.methods({
         {
            // var status = Prospects.insert(prospect);
            //forgot password login
-            console.log('Blog reCAPTCHA verification passed!');
+            console.log('publishblogpost: Blog reCAPTCHA verification passed!');
            var status= Blogs.insert(blogpost);
            if(status>0)                     
             console.log('Blog Saved Successfully!');
         }       //do stuff with your formData
         return true;
     },
+
+
+updateblogpost: function(blogpost, captchaData) {
+        var verifyCaptchaResponse = reCAPTCHA.verifyCaptcha(this.connection.clientAddress, captchaData);
+        if (!verifyCaptchaResponse.success) {
+            console.log('updateblogpost : reCAPTCHA check failed!', verifyCaptchaResponse);
+            throw new Meteor.Error(422, 'reCAPTCHA Failed: ' + verifyCaptchaResponse.error);
+        } 
+        else
+        {         
+           console.log('updateblogpost: Blog reCAPTCHA verification passed!');
+
+           var status= Blogs.update({'_id' : blogpost._id},
+                                    {$set:
+                                            { posttitle : blogpost.posttitle, 
+                                              categories :blogpost.categories ,
+                                              postcontent:blogpost.postcontent,
+                                              snippet:blogpost.snippet,
+                                              isdraft:blogpost.isdraft,
+                                              day:blogpost.day,
+                                              month:blogpost.month,
+                                              postmetauser:blogpost.postmetauser,
+                                              author:blogpost.author
+                                            }
+                                    });
+
+           if(status>0)                     
+            console.log('Blog Saved Successfully!');
+        }       //do stuff with your formData
+        return true;
+    },
+
 
      blogcomment: function(comment, captchaData) {
         var verifyCaptchaResponse = reCAPTCHA.verifyCaptcha(this.connection.clientAddress, captchaData);

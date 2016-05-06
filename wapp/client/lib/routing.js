@@ -204,6 +204,18 @@ FlowRouter.route('/faq', {
         }
     });
 
+
+     FlowRouter.route('/editpost/:postId', {
+        action: function(params,queryparams) {           
+            console.log(params.postId);
+            BlazeLayout.render('mainlayout', {
+                content: 'editpost'
+            });
+        }
+    });
+
+
+
     FlowRouter.route('/userlist', {
         action: function() {
             BlazeLayout.render('mainlayout', {

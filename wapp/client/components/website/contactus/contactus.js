@@ -129,7 +129,7 @@ Template.contactus.onRendered(function() {
             overviewMapControl: true
         },
         scrollwheel: false,
-        markers: mapMarkers,
+        //markers: mapMarkers,
         latitude: initLatitude,
         longitude: initLongitude,
         zoom: 5
