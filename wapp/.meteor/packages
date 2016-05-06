@@ -78,6 +78,6 @@ altapp:recaptcha
 ajduke:bootstrap-tagsinput
 summernote:summernote
 
-#meteorhacks:kadira
+meteorhacks:kadira
 johannesma:meteor-flexslider
 accounts-base
