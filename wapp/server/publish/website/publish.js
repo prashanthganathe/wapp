@@ -6,6 +6,15 @@ Meteor.publish('subscribe', function() {
     return Subscribes.find();
 });
 
+Meteor.publish('poll', function() {
+    return Polls.find();
+});
+
+Meteor.publish('questionaire', function() {
+    return Questionaires.find();
+});
+
+
 
 Meteor.publish('secrets', function(group) {
     if (Roles.userIsInRole(this.userId, ['view-secrets', 'admin'], group)) {
@@ -29,3 +38,5 @@ Meteor.publish(null, function (){
 Meteor.publish(null, function (){
   return Meteor.users.find({})
 });
+
+

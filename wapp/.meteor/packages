@@ -69,7 +69,7 @@ percolatestudio:synced-cron
 
 #simple:reactive-method
 
-#peerlibrary:aws-sdk
+
 #peerlibrary:reactive-publish
 
 npm-container
@@ -81,3 +81,7 @@ summernote:summernote
 meteorhacks:kadira
 johannesma:meteor-flexslider
 accounts-base
+peerlibrary:aws-sdk
+session
+steeve:jquery-qrcode
+u2622:persistent-session

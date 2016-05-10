@@ -15,6 +15,7 @@ aldeed:schema-index@1.0.1
 aldeed:simple-schema@1.5.3
 allow-deny@1.0.4
 altapp:recaptcha@2.0.1
+amplify@1.0.0
 autopublish@1.0.7
 autoupdate@1.2.9
 babel-compiler@6.6.4
@@ -103,8 +104,10 @@ observe-sequence@1.0.11
 ordered-dict@1.0.7
 pcel:loading@1.0.3
 peerlibrary:assert@0.2.5
+peerlibrary:aws-sdk@2.2.42_1
 peerlibrary:base-component@0.14.0
 peerlibrary:blaze-components@0.16.2
+peerlibrary:blocking@0.5.2
 peerlibrary:computed-field@0.3.1
 peerlibrary:data-lookup@0.1.0
 peerlibrary:reactive-field@0.1.0
@@ -128,6 +131,7 @@ spiderable@1.0.13
 srp@1.0.8
 standard-minifier-css@1.0.6
 standard-minifier-js@1.0.6
+steeve:jquery-qrcode@0.2.2
 stevezhu:fbgraph@2.0.0
 summernote:summernote@0.8.1
 templating@1.1.9
@@ -136,6 +140,7 @@ themeteorchef:jquery-validation@1.14.0
 tracker@1.0.13
 tsega:bootstrap3-datetimepicker@4.17.37_1
 twbs:bootstrap@3.3.6
+u2622:persistent-session@0.4.4
 ui@1.0.11
 underscore@1.0.8
 url@1.0.9

@@ -1,54 +1,32 @@
+
+
 Template.editpost.helpers({
     loadpost: function() {
         var id = FlowRouter.getParam('postId');
-        return Blogs.findOne({ '_id': id });
+        var blogpost= Blogs.findOne({ '_id': id });
+        if(blogpost!=undefined)    
+            blogpost.categoriesstring = blogpost.categories.toString();
+        return blogpost;     
     },
-      getStuff: function(){
-        return "Amsterdam,Washington,Sydney,Beijing,Cairo";
-    },
-    content: function(){
-         var id = FlowRouter.getParam('postId');
-        var blog= Blogs.findOne({ '_id': id }).fetch();
-        return blog.postcontent;
-
-       // return "Amsterdam, Washington, Sydney, Beijing, Cairo";
+    loadcategories: function() {
+        return "cloud, mobile, Web";
     }
+ 
 });
 
 
 Template.editpost.onRendered(function() {
-
-   
-
-    $('#summernote').summernote({
+   $('#summernote').summernote({
         height: 300, // set editor height
         minHeight: null, // set minimum height of editor
         maxHeight: null, // set maximum height of editor
         focus: true // set focus to editable area after initializing summernote
-       // placeholder: editableblog.postcontent
+        
     });
 
-     //$('.tags').tagsinput({ });
+//$("#summernote").summernote("code",'show blog content');
 
-/* var id = FlowRouter.getParam('postId');
-    var editableblog = Blogs.findOne({ '_id': id });
-    if (editableblog == undefined)
-        return;*/
-
-/*    $('.tags').tagsinput({
-        typeahead: {
-            source: ["cloud", "mobile"]
-        }
-    });*/
- //   var myTags = ["one", "two", "three"];
- //   $('.tags').tagsinput('add', myTags);
-
-/* Tracker.autorun(function () {  
-     var myTags =['one','two']; //Posts.findOne({_id: this._id}).tags; 
-
-      $('.tags').tagsinput('add', myTags); 
-      $('input').tagsinput({});
-   }); */
+$('.tags').tagsinput({ });
 
 
 });
@@ -57,7 +35,6 @@ Template.editpost.onRendered(function() {
 Template.editpost.events({
     "submit form": function(e, b) {
         e.preventDefault();
-
         var blogpost = {};
         blogpost.titleimages = [];
         blogpost.posttitle = $('#title').val();
@@ -73,7 +50,7 @@ Template.editpost.events({
         blogpost.month = moment().month();
         blogpost.postmetauser = 'currentuserinfo';
         blogpost.author = 'currentusername';
-        blogpost._id = '';
+        blogpost._id =  FlowRouter.getParam('postId');;
         // blogpost.createdat=new Date();
 
         var captchaData = grecaptcha.getResponse();

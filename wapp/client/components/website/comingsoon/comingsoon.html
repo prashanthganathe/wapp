@@ -1,0 +1,83 @@
+<template name="comingsoon">
+    <div class="row">
+        <div class="col-md-12 center">
+            <h1 class="mb-sm small">{{feature}} IS COMING SOON</h1>
+            <p class="mb-none lead"> </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <hr class="tall">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="progress-bars">
+                <div class="progress-label">
+                    <span><strong>Conception:</strong> Finished</span>
+                </div>
+
+				<div class="progress">
+				  <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+				  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+				    100% Complete (success)
+				  </div>
+				</div>
+
+
+
+
+
+                <div class="progress-label">
+                    <span><strong>Design</strong></span>
+                </div>
+                <div class="progress">
+				  <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar"
+				  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+				    50% Complete (success)
+				  </div>
+				</div>
+
+                <div class="progress-label">
+                    <span><strong>Development</strong></span>
+                </div>
+                 <div class="progress">
+				  <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
+				  aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:10%">
+				    10% Complete (success)
+				  </div>
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <hr class="tall">
+        </div>
+    </div>
+
+    <div class="row">
+						<div class="col-md-6 col-md-offset-3">
+							<div class="newsletter">
+								<h5 class="heading-primary">Let me know when this feature is done</h5>
+
+								<div class="alert alert-success hidden" id="newsletterSuccess">
+									<strong>Success!</strong> You've been added to our email list.
+								</div>
+
+								<div class="alert alert-danger hidden" id="newsletterError"></div>
+
+								<form id="newsletterForm"  method="POST">
+									<div class="input-group">
+										<input class="form-control" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="email" required>
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="submit">Subscribe Now</button>
+										</span>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+
+</template>

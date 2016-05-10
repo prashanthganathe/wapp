@@ -5,6 +5,17 @@ Meteor.navigateTo = function(path) {
     FlowRouter.go(path)
 }
 
+
+
+
+  FlowRouter.route('/comingsoon', {
+        action: function() {
+            BlazeLayout.render('mainlayout', {
+                content: 'comingsoon'
+            });
+        }
+    });
+
 FlowRouter.notFound = {
     // Subscriptions registered here don't have Fast Render support.
     subscriptions: function() {
@@ -232,6 +243,61 @@ FlowRouter.route('/faq', {
         }
     });
 
+     FlowRouter.route('/cloudconsultancy', {
+        action: function() {
+            BlazeLayout.render('mainlayout', {
+                content: 'cloudconsultancy'
+            });
+        }
+    });
+
+     FlowRouter.route('/freeservicedashboard', {
+        action: function() {
+            BlazeLayout.render('mainlayout', {
+                content: 'freeservicedashboard'
+            });
+        }
+    });
+     FlowRouter.route('/ask', {
+        action: function() {
+            BlazeLayout.render('mainlayout', {
+                content: 'ask'
+            });
+        }
+    });
+
+
+  FlowRouter.route('/addresource', {
+        action: function() {
+            BlazeLayout.render('mainlayout', {
+                content: 'addresource'
+            });
+        }
+    });
+
+    FlowRouter.route('/createpoll', {
+        action: function() {
+            BlazeLayout.render('mainlayout', {
+                content: 'createpoll'
+            });
+        }
+    });
+
+   FlowRouter.route('/pollSubmit', {
+        action: function() {
+            BlazeLayout.render('mainlayout', {
+                content: 'pollSubmit'
+            });
+        }
+    });
+
+      FlowRouter.route('/pollPage/:_id', {
+        action: function() {
+            BlazeLayout.render('mainlayout', {
+                content: 'pollPage'
+            });
+        }
+    });
 
 
 
