@@ -1,3 +1,12 @@
+Template.createpoll.helpers({
+    useremail: function() {
+        return Meteor.user().emails[0].address;
+      
+    }
+    
+ 
+});
+
 Template.createpoll.events({
 
 
@@ -16,8 +25,8 @@ Template.createpoll.events({
             } else {
                 var pollobj = result;
                 console.log(pollobj);
-
-                Session.set('newpoll', pollobj);
+                poll._id=pollobj;
+                Session.setPersistent('newpoll', poll);
                 FlowRouter.go('/pollSubmit');
             }
         });

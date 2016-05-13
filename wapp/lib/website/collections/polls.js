@@ -1,2 +1,2 @@
-Polls = new Mongo.Collection('poll');
-Questionaires = new Mongo.Collection('questionaire');
+Polls = new Mongo.Collection('polls');
+Questionaires = new Mongo.Collection('questionaires');

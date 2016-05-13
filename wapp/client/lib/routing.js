@@ -299,5 +299,12 @@ FlowRouter.route('/faq', {
         }
     });
 
+      FlowRouter.route('/newuser', {
+        action: function() {
+            BlazeLayout.render('mainlayout', {
+                content: 'newuser'
+            });
+        }
+    });
 
 

@@ -6,11 +6,11 @@ Meteor.publish('subscribe', function() {
     return Subscribes.find();
 });
 
-Meteor.publish('poll', function() {
+Meteor.publish('polls', function() {
     return Polls.find();
 });
 
-Meteor.publish('questionaire', function() {
+Meteor.publish('questionaires', function() {
     return Questionaires.find();
 });
 

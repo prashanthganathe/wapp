@@ -1,5 +1,10 @@
 <template name="createpoll">
-<div class="container">
+
+{{#if loggingIn}}  
+  {{> loading}}
+{{else}}
+  {{#if currentUser}}  
+    <div class="container">
         <form id="contactFormAdvanced" method="POST" enctype="multipart/form-data">
             <div class="col-md-6 col-md-offset-3">
                 <div class="row">
@@ -14,7 +19,8 @@
                             </div>
                             <div class="col-md-6">
                                 <label>email address *</label>
-                                <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
+                                <input type="email"  data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" value="{{useremail}}" disabled>
+                                If the email ID does not belongs to you, kindly logout and login with your credentials. {{> logout}}
                             </div>
                         </div>
                     </div>
@@ -55,4 +61,8 @@
             </div> -->
         </form>
     </div>
+     {{else}}
+      {{> login}}
+    {{/if}}
+{{/if}}
 </template>

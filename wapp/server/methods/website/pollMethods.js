@@ -5,7 +5,7 @@ Meteor.methods({
         return newpoll;
     },
 
-    pollInsert: function(pollAttributes, pollid,user) {
+    addquestionaire: function(pollAttributes, pollid,user) {
        /* check(Meteor.userId(), String);
         check(pollAttributes, {
             title: String,
@@ -25,7 +25,7 @@ Meteor.methods({
         //  throw new Meteor.Error('invalid-poll', "You must set title and options for your poll");
 
        // var user = Meteor.user();
-        var poll = _.extend(pollAttributes, {
+        var question = _.extend(pollAttributes, {
             pollid: pollid,
             userId: user._id,
             author: user.username,
@@ -34,25 +34,28 @@ Meteor.methods({
             votes: votes,
             voteCount: 0
         });
-console.log(poll);
+       // console.log('question');
 
-        var pollId = Questionaires.insert(poll);
+//console.log(question);
+
+        var questionid = Questionaires.insert(question);
+
+        console.log('questionid:'+questionid);
 
         //add the poll and karma to author
         Meteor.users.update({
             _id: user._id
         }, {
-            $addToSet: { polls: pollId },
+            $addToSet: { polls: pollid },
             $inc: { karma: 1 }
         });
 
-        return {
-            _id: pollId
-        };
+        return questionid;
+       
     },
 
     pollDelete: function(pollId) {
-        Polls.remove(pollId);
+        Polls.remove(pollid);
     },
 
     vote: function(pollId, optionId) {

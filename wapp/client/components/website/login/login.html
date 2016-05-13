@@ -12,21 +12,28 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-12">
+							<div class="col-md-12 col-sm-offset-3">
 								<h1>Login</h1>
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<div class="container">
+				{{> loginform}}
+
+				
+			</div>
+</template>
+
+<template name="loginform">
+<div class="container">
 
 					<div class="row">
 						<div class="col-md-12">
 
 							<div class="featured-boxes">
 								<div class="row">
-									<div class="col-sm-6 col-sm-offset-3">
+									<div class="col-sm-6 ">
 
 									<form  method="POST" enctype="multipart/form-data">
 										<div class="featured-box featured-box-primary align-left mt-xlg" style="height: 387px;">
@@ -91,6 +98,4 @@
 
 				</div>
 
-			</div>
 </template>
-

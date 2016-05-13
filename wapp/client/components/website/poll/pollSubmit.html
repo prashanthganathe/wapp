@@ -1,103 +1,35 @@
 <template name="pollSubmit">
-    <div class="container">
-        <form id="contactFormAdvanced" method="POST" enctype="multipart/form-data">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="row">
-                    <div class="offset-anchor" id="contact-sent"></div>
-                    <h2 class="mb-sm mt-sm"><strong>Create Questionaire</strong></h2>
-                    <input type="hidden" value="true" name="emailSent" id="emailSent">
-                    <div class="row">
-                        <div class="form-group {{errorClass 'title'}}">
-                            <div class="col-md-10">
-                                <label>Question*</label>
-                                <input type="text" value="" data-msg-required="Please enter Question" maxlength="100" class="form-control" name="title" id="name" required>
-                                <span class="help-block">{{errorMessage 'title'}}</span>
-                            </div>
-                            <div class="col-md-2">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group {{errorClass 'options'}}">
-                            <div class="col-md-12">
-                                <label>Options</label>
-                                {{#each pollOptions}}
-                                <div class="controls">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            <input name="option" type="text" value="" placeholder="option" class="form-control" maxlength="40" />
-                                        </div>
-                                    </div>
-                                </div>
-                                {{/each}}
-                                <div class="btn-toolbar">
-                                    <button type="button" class="add-option btn btn-success btn-lg" title="Add option" aria-label="Left Align">
-                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                                    </button>
-                                </div>
-                                 <div class="controls">
-                <span class="help-block">{{errorMessage 'options'}}</span>
-            </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group">
-                            <div class="col-md-12">
-                               <input type="submit" value="Submit" class="btn btn-warning btn-lg" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--      <div class="col-md-6">
-               
+    <div class="container">        
+            <div class="col-xs-12 ">
+             <h2><strong>Poll: {{poll.name}}</strong> </h2>
                
                 <div class="row">
-                    <div class="form-group">
-                    <div class="col-md-2"></div>
-                        <div class="col-md-6" style="position: absolute;bottom:0;">
-                           
-                           
-                        </div>
-                      
-                    </div>
+                   
+                  <div class="col-xs-7">
+                    {{> pollquestion}}
                 </div>
-            </div> -->
-        </form>
+                 <div class="col-xs-5">
+                 {{> listofquestionaires}} 
+                 </div>
+            </div>       
     </div>
 
 
 
-<!--     <form class="main poll-form">
-        <div class="form-group {{errorClass 'title'}}">
-            <label class="control-label" for="title">Ask a question</label>
-            <div class="controls">
-                <input name="title" id="title" type="text" value="" placeholder="type your question" class="form-control" />
-                <span class="help-block">{{errorMessage 'title'}}</span>
-            </div>
-        </div>
-        <div class="form-group {{errorClass 'options'}}">
-            <label class="control-label" for="title">Answers</label>
-            {{#each pollOptions}}
-            <div class="controls">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <input name="option" type="text" value="" placeholder="option" class="form-control" maxlength="40" />
-                    </div>
-                </div>
-            </div>
-            {{/each}}
-            <div class="btn-toolbar">
-                <button type="button" class="add-option btn btn-default btn-xs" title="Add option" aria-label="Left Align">
-                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                </button>
-            </div>
-            <div class="controls">
-                <span class="help-block">{{errorMessage 'options'}}</span>
-            </div>
-        </div>
-        <input type="submit" value="Submit" class="btn btn-primary" />
-    </form> -->
+    
+   </div>
 </template>
+
+
+<!-- <template name="correctanswer">
+    <label for="select">{{category}}</label>
+    <select id="select">
+        <option value="">None</option>
+        {{#each this}}
+       
+        <option value="{{this}}">{{this}}</option>
+   
+        {{/each}}
+    </select>
+</template>
+ -->

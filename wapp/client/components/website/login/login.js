@@ -1,4 +1,4 @@
-Template.login.events({
+Template.loginform.events({
     'submit form': function(){
           event.preventDefault();
         var email = $('#loginemail').val();
