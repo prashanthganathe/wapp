@@ -19,3 +19,9 @@ Template.registerHelper('indexedArray', function(context, options) {
     });
   }
 });
+
+
+Template.registerHelper('incremented', function(index) {
+  index++;
+  return index;
+  });

@@ -1,0 +1,55 @@
+<template name="newPoll">
+    <form id="contactFormAdvanced" method="POST" enctype="multipart/form-data">
+        <div class="col-md-10 col-md-offset-1 ">
+            <div class="row">
+                <div class="offset-anchor" id="contact-sent"></div>
+                <h2 class="mb-sm mt-sm"><strong>Create Poll</strong></h2>
+                <input type="hidden" value="true" name="emailSent" id="emailSent">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <label>Poll name *</label>
+                            <input type="text" value="" data-msg-required="Please enter Poll name." maxlength="100" class="form-control" name="name" id="name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label>email address *</label>
+                            <input type="email" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" value="{{useremail}}" disabled> If the email ID does not belongs to you, kindly logout and login with your credentials. 
+                            {{> logout}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label>Description</label>
+                            <!-- <input type="text" value="" data-msg-required="Description on Poll" maxlength="100" class="form-control" name="phone" id="phone" required> -->
+                            <textarea maxlength="5000" data-msg-required="Description on Poll." rows="5" class="form-control" name="message" id="descripiton" placeholder="Enter text" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="submit" id="btncreatepoll" value="Save and create Questionaires >>" class="btn btn-warning btn-lg pull-right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--      <div class="col-md-6">
+               
+               
+                <div class="row">
+                    <div class="form-group">
+                    <div class="col-md-2"></div>
+                        <div class="col-md-6" style="position: absolute;bottom:0;">
+                           
+                           
+                        </div>
+                      
+                    </div>
+                </div>
+            </div> -->
+    </form>
+
+</template>

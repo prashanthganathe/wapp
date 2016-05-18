@@ -19,7 +19,12 @@ Template.pollquestion.events({
 
         var questionaire = {
             title: title,
-            options: options
+            options: options,
+            pollid:Session.get('newpoll')._id,
+            userid:Meteor.user()._id,
+            author: Meteor.user().emails[0].address
+
+
         };
 
         //var errors = validatePoll(poll);
@@ -27,22 +32,22 @@ Template.pollquestion.events({
        //     return Session.set('pollSubmitErrors', errors);
        // }
        var user = Meteor.user();
-       var pollid=Session.get('newpoll')._id;
-        Meteor.call('addquestionaire', questionaire,pollid,user, function(error, result) {
-           // if (error) 
-            //    return throwError(error.reason);
+       
+        Meteor.call('addquestionaire', questionaire, user,function(error, result) {
+           if (error) 
+              {
+                 //throw err
+              }
+           else
+           {
+                sAlert.success('Question created successfully.');
 
-           // if (result.pollExists) throwError("This link has already been submitted");
-
-           // FlowRouter.go('pollPage', { _id: result._id });
-           //dynamically add new pollquestion template 
-           //hide current button
-
-        /*  var view= Blaze.renderWithData(Template.pollquestion, "", $('div#dynamicquestion'));
-          view.onViewReady(function(){
-            console.log('viewready');
-
-          })*/
+                $(e.target).find('[name=question]').val('');
+                $(e.target).find('[name=option]').each(function() {
+                     $(this).val('');
+                });
+           }
+        
         });
     },
 

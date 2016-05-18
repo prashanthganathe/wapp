@@ -11,6 +11,7 @@
     "eventie": "^1.0.6",
     "fizzy-ui-utils": "^2.0.1",
     "get-size": "^2.0.2",
+    "highcharts": "^4.2.5",
     "jquery": "^2.2.3",
     "masonry-layout": "^4.0.0",
     "meteor-node-stubs": "~0.2.0",

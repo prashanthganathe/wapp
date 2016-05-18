@@ -5,81 +5,124 @@ Meteor.methods({
         return newpoll;
     },
 
-    addquestionaire: function(pollAttributes, pollid,user) {
-       /* check(Meteor.userId(), String);
+    addquestionaire: function(question, user) {
+        /* check(Meteor.userId(), String);
         check(pollAttributes, {
             title: String,
             options: Array
         });
-*/	
+*/
 
 
-        var options = pollAttributes.options;
+        /*var options = pollAttributes.options;*/
+
         var votes = {};
-        for (var i = 0; i < options.length; i++) {
-            votes[options[i].id] = 0;
+        for(var i = 0; i < question.options.length; i++) {
+          votes[question.options[i].id] = 0;
         }
 
+        var questionfinal = _.extend(question, {                              
+                              voters: [],
+                              votes: votes,
+                              voteCount: 0
+                            });
+
+    /*    var votes = {};
+        question.votes={};
+        console.log('before votes')
+        console.log(question);
+       
+        _.map(question.options, function(value, key) {              
+             //question.votes[value.id]=0;
+            //question.votes[value.id] =0;
+            votes[value.id]=0;
+        });
+        question.votes= votes;*/
+
+console.log('after map');
+console.log(question);
+
+      /*  for (var i = 0; i < question.options.length; i++) {
+
+            question.votes[question.options[i].id] = 0;
+        }*/
+
+        //    console.log('votes');
+        //   console.log(votes);
         // var errors = validatePoll(pollAttributes); 
         //  if (errors.title || errors.options)
         //  throw new Meteor.Error('invalid-poll', "You must set title and options for your poll");
 
-       // var user = Meteor.user();
-        var question = _.extend(pollAttributes, {
-            pollid: pollid,
-            userId: user._id,
-            author: user.username,
-            submitted: new Date(),
-            voters: [],
-            votes: votes,
-            voteCount: 0
-        });
-       // console.log('question');
+        // var user = Meteor.user();
+        /* var question = _.extend(pollAttributes, {
+             pollid: pollid,
+             userId: user._id,
+             author: user.username,
+             submitted: new Date(),
+             voters: [],
+             votes: votes,
+             voteCount: 0
+         });*/
+        // console.log('question');
 
-//console.log(question);
+        //console.log(question);
 
-        var questionid = Questionaires.insert(question);
+        var questionid = Questionaires.insert(questionfinal);
 
-        console.log('questionid:'+questionid);
+            console.log(votes);
+       /*  Questionaires.update({
+                  _id: questionid
+                }, {
+                  $set: {
+                    votes: votes
+                   
+                  }
+                });*/
+
+        // $addToSet: { polls: question.pollid },
+
+        console.log('questionid:' + questionid);
 
         //add the poll and karma to author
         Meteor.users.update({
             _id: user._id
         }, {
-            $addToSet: { polls: pollid },
+            $addToSet: { polls: question.pollid },
             $inc: { karma: 1 }
         });
 
         return questionid;
-       
+
     },
 
     pollDelete: function(pollId) {
         Polls.remove(pollid);
     },
 
-    vote: function(pollId, optionId) {
-        check(this.userId, String);
-        check(pollId, String);
-        check(optionId, String);
+    submitvote: function(questionSubmit) {
+        /* check(this.userId, String);
+         check(pollId, String);
+         check(optionId, String);*/
+
+ console.log('submitvote');
+        console.log(questionSubmit);
 
         var ud = { $inc: {} };
-        ud.$inc['votes.' + optionId] = 1;
+        ud.$inc['votes.' + questionSubmit.optionId] = 1;
         ud.$inc['voteCount'] = 1;
-        ud.$addToSet = { voters: this.userId };
+        ud.$addToSet = { voters: questionSubmit.userId };
 
-        var affected = Polls.update({
-            _id: pollId,
-            voters: { $ne: this.userId }
+        console.log('ud');
+        console.log(ud);
+
+        var affected = Questionaires.update({
+            _id: questionSubmit.qId,
+            voters: { $ne: questionSubmit.userId }
         }, ud);
 
         //add the vote to author's karma
-        var poll = Polls.findOne(pollId);
-        Meteor.users.update({
-            _id: poll.userId
-        }, {
-            $inc: { karma: 1 }
-        });
+        var questionaire = Questionaires.findOne(questionSubmit.qId);
+        var status = Meteor.users.update({ _id: questionaire.userid }, { $inc: { karma: 1 } });
 
         if (!affected) throw new Meteor.Error('invalid', "You weren't able to vote for this poll");
     }

@@ -31,6 +31,7 @@ caching-html-compiler@1.0.6
 callback-hook@1.0.8
 check@1.2.1
 coffeescript@1.0.17
+copleykj:livestamp@1.1.5
 dburles:mongo-collection-instances@0.3.4
 ddp@1.2.5
 ddp-client@1.2.7
@@ -62,6 +63,7 @@ insecure@1.0.7
 isotope:isotope@2.1.0_1
 johannesma:meteor-flexslider@0.0.1
 jquery@1.11.8
+juliancwirko:s-alert@3.1.4
 kadira:blaze-layout@2.3.0
 kadira:flow-router@2.12.1
 lai:collection-extensions@0.1.4
@@ -70,6 +72,8 @@ less@2.6.0
 livedata@1.0.18
 localstorage@1.0.9
 logging@1.0.12
+maazalik:highcharts@0.4.0
+maazalik:highcharts-3d@0.4.0
 mdg:validation-error@0.2.0
 meteor@1.1.14
 meteor-base@1.0.4

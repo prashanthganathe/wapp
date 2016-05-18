@@ -14,6 +14,9 @@ Meteor.publish('questionaires', function() {
     return Questionaires.find();
 });
 
+Meteor.publish('myquestionresult', function(qid) {
+    return Questionaires.find({'_id':qid});
+});
 
 
 Meteor.publish('secrets', function(group) {

@@ -1,0 +1,84 @@
+<template name="currentpolls">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+            <div class="offset-anchor" id="contact-sent"></div>
+            <h2 class="mb-sm mt-sm"><strong>Existing Polls</strong></h2>
+            <input type="hidden" value="true" name="emailSent" id="emailSent">
+            <!-- <div class="row">
+                <div class="form-group">
+                    <div class="col-md-9 ">                      
+
+                            <div class="form-group">
+                                            <label class="col-md-3 control-label">Select Poll </label>
+                                            <div class="col-md-8">
+                                            <select id="poll-select" class="form-control input-lg mb-md populate placeholder" >
+                                                   {{#each getpolllist}}
+                                                       <option value="{{_id}}">{{name}}</option>
+                                                   {{/each}}                                         
+                                                </select>
+                                            </div>
+                                        </div>
+
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" id="editpoll" class="btn add-option btn-success btn-sm pull-right" aria-label="Left Align" value="Add Option">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add/Edit Questions
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+            <div class="panel-body">
+                <table class="table table-no-more table-bordered table-striped mb-none">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="hidden-xs hidden-sm">Name</th>
+                            <th class="text-right">Share</th>
+                          <!--   <th class="text-right hidden-xs hidden-sm">Type</th> -->
+                            <th class="text-right">CreatedOn</th>
+                            <th class="text-right"></th>
+                            <th class="text-right">Analytics</th>
+                            <th class="text-right"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each getpolllist}}
+                        <tr>
+                            <td data-title="Code">{{incremented @index}}</td>
+                            <td data-title="Company" class="hidden-xs hidden-sm">{{name}}</td>
+                            <td data-title="Price" class="text-right">{{share}}</td>
+                            <!-- <td data-title="Change" class="text-right hidden-xs hidden-sm">{{type}}</td> -->
+                            <td data-title="Change %" class="text-right">{{livestamp summitted}}</td>
+                            <td data-title="" class="text-right">
+                                <!-- <div class="testqrcode" data-qrcode="{{getqrcode _id}}"></div> -->
+                                <div class="link"><a href="../pollitem/{{ _id}}">Share</a></div>
+                            </td>
+                            <td data-title="Change %" class="text-right">
+                           
+                                {{> tinyanalytics _id}}
+                            </td>
+                            <td data-title="Change %" class="text-right">
+                             
+
+                               <!--  <button type="button" id="{{_id}}" class="btn edit-poll btn-success btn-sm pull-right" title="edit" aria-label="Left Align" value="Add Option">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Edit
+                                </button> -->
+                                <button type="button" id="{{_id}}" class="btn add-question btn-success btn-sm pull-right" title="edit" aria-label="Left Align" value="Add Option">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Add Question
+                                </button>
+
+                                <button  type="button" id="{{_id}}" class="btn delete-poll btn-warning btn-sm pull-right" title="delete" aria-label="Left Align" value="Add Option">
+                                    <span class="glyphicon glyphicon-delete" aria-hidden="true"></span>Delete
+                                </button>
+
+                            </td>
+                            
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</template>
+

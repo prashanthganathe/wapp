@@ -1,4 +1,4 @@
-Template.createpoll.helpers({
+Template.newPoll.helpers({
     useremail: function() {
         return Meteor.user().emails[0].address;
       
@@ -7,7 +7,7 @@ Template.createpoll.helpers({
  
 });
 
-Template.createpoll.events({
+Template.newPoll.events({
 
 
     'submit form': function(e) {
@@ -18,6 +18,8 @@ Template.createpoll.events({
         poll.name = $('#name').val();
         poll.email = $('#email').val();
         poll.description = $('#descripiton').val();
+        poll.userid=Meteor.user()._id;
+        //poll.share
        
         Meteor.call('createPoll', poll, function(error, result) {
             if (error) {
