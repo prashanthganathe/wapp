@@ -1,0 +1,10 @@
+<template name="fblogin">
+    {{#if currentUser}}
+    <button id="logout">Logout</button>
+    {{else}}
+    <a id="facebook-login" class="btn btn-link-1 btn-link-1-facebook center-block" 
+    		style="background: #4862a3; color:white;" href="#">
+        <i class="fa fa-facebook"></i> Facebook
+    </a>
+    {{/if}}
+</template>

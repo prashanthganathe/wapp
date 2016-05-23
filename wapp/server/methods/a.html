@@ -1,0 +1,305 @@
+    <div class="row content-header">
+        <h4 class="row appttitle1">
+            @Resource.rgslbl_nwgrp
+        </h4>
+        <div class="row appttitle2">
+            @Resource.rglbl_bscinfo
+        </div>
+
+        <div class="apptinlineblock">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group col-xs-3">
+                        @Html.LabelFor(model => model.EventName, htmlAttributes: new { @class = "control-label labelCss " })                     
+                        <div>
+                            @Html.EditorFor(model => model.EventName, new { htmlAttributes = new { @class = "form-control", rows = "20", style = "width:90%; float:left;" } })
+                            <div style="float:left;color:red;">*</div>
+                        </div>
+                        @Html.ValidationMessageFor(model => model.EventName, "", new { @class = "text-danger" })  
+                    </div>
+
+                    <div class="form-group col-xs-3">
+                        @Html.LabelFor(model => model.FromDate, htmlAttributes: new { @class = "labelCss" })
+                        <div class='input-group date' id='datetimepicker1'>
+
+                            @*value=@Model.MyDate.ToString(datePattern)*@
+                            @Html.EditorFor(m => m.FromDate, new { htmlAttributes = new { @class = "form-control default-date-picker " } })
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                            <script type="text/javascript">
+                                $(function () {
+                                    $('#datetimepicker1').datetimepicker({ locale: userlocale, format: 'MM/DD/YYYY hh:mm A' }); //{ locale: userlocale }, format:'MM/DD/YYYY LT'
+                               
+                                });
+                            </script>
+                            <span style="color:red;">*</span>
+                        </div>
+                        @Html.ValidationMessageFor(model => model.FromDate, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group col-xs-3">
+                        @Html.LabelFor(model => model.ToDate, htmlAttributes: new { @class = "labelCss" })
+                        <div class='input-group date' id='datetimepicker2'>
+                            @Html.EditorFor(m => m.ToDate, new {  htmlAttributes = new { @class = "form-control default-date-picker " } })
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                            <script type="text/javascript">
+                                $(function () {
+                                    $('#datetimepicker2').datetimepicker({ locale: userlocale, format: 'MM/DD/YYYY hh:mm A' });// { locale: userlocale }, format: 'MM/DD/YYYY LT'                                   
+                                });
+                            </script>
+                            <span style="color:red;">*</span>
+                        </div>
+                        @Html.ValidationMessageFor(model => model.ToDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <div class="form-group col-xs-3">
+                            @Html.LabelFor(model => model.PatientsInSlots, htmlAttributes: new { @class = "control-label labelCss " })
+                            <div>
+                                @*@Html.EditorFor(model => model.PatientsInSlots, new { htmlAttributes = new { @class = "form-control", style = "width:90%; float:left;" } })*@
+                               
+
+                                @Html.DropDownListFor(model => model.PatientsInSlots, new List<SelectListItem>{
+                                           new SelectListItem { Text = "1" , Value="1"},
+                                           new SelectListItem { Text = "2", Value="2"},
+                                           new SelectListItem { Text = "3", Value="3" },
+                                           new SelectListItem { Text = "4", Value="4"},
+                                           new SelectListItem { Text = "5", Value="5"},
+                                           new SelectListItem { Text = "6", Value="6"},
+                                           new SelectListItem { Text = "7", Value="7"},
+                                           new SelectListItem { Text = "8", Value="8"},
+                                           new SelectListItem { Text = "9", Value="9"},
+                                           new SelectListItem { Text = "10", Value="10"},
+                                           new SelectListItem { Text = "11", Value="11"},
+                                           new SelectListItem { Text = "12", Value="12"},
+                                           new SelectListItem { Text = "13", Value="13"},
+                                           new SelectListItem { Text = "14", Value="14"},
+                                           new SelectListItem { Text = "15", Value="15"},
+                                           new SelectListItem { Text = "16", Value="16"},
+                                           new SelectListItem { Text = "17", Value="17"},
+                                           new SelectListItem { Text = "18", Value="18"},
+                                           new SelectListItem { Text = "19", Value="19"},
+                                           new SelectListItem { Text = "20", Value="20"}
+                                        }, new { @class = "form-control", style = "width: 90%;float:left;" }) <span style="color:red;float:left;">*</span>
+
+
+                            </div>
+                                @Html.ValidationMessageFor(model => model.PatientsInSlots, "", new { @class = "text-danger" })
+                            </div>
+
+                        <div class="form-group col-xs-3">
+                            @Html.LabelFor(model => model.SlotDuration, htmlAttributes: new { @class = "control-label labelCss " })
+                            <div>
+                            @*@Html.EditorFor(model => model.SlotDuration, new { htmlAttributes = new { @class = "form-control",style="width:90%;float:left;" } })*@
+
+
+
+                                @Html.DropDownListFor(model => model.SlotDuration, new List<SelectListItem>{
+                                           new SelectListItem { Text = "15" , Value="15"},
+                                           new SelectListItem { Text = "30", Value="30"},
+                                           new SelectListItem { Text = "45", Value="45" },
+                                           new SelectListItem { Text = "60", Value="60"}
+                                       
+                                        }, new { @class = "form-control", style = "width: 90%;float:left;"  })
+                                <span style="color:red;float:left;">*</span>
+                                </div>
+                            
+                            @Html.ValidationMessageFor(model => model.SlotDuration, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group col-xs-2"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        <div class="row appttitle2 ">
+            <div class="col-xs-12">  @Resource.rgevnt_info</div>
+        </div>
+
+
+        <div class="row ">
+            <div class="col-xs-12">
+                <div class="form-group col-xs-8">
+                    @Html.LabelFor(model => model.Subject, htmlAttributes: new { @class = "control-label labelCss " })<br />
+                    <div>
+                    @Html.EditorFor(model => model.Subject, new { style ="width:400px;",  htmlAttributes = new { @Value = Resource.registrationsubject, @class = "form-control sixtypercentwidth" } })
+                    <span style="color:red;float:left;">*</span>
+                        </div>
+                    @Html.ValidationMessageFor(model => model.Subject, "", new { style = "width:100px;", @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group col-lg-12">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label labelCss " })<br />
+                    @Html.TextAreaFor(model => model.Description,6,400, new { @style="min-width:60%;",  htmlAttributes = new {  @class = "form-control  sixtypercentwidth"  } })
+                    <span style="color:red;">*</span>
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        @*
+            <div class="row appttitle2 ">
+                <div class="col-xs-12">Patient Information Form</div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="labelCss col-md-2">
+                        <label>
+                            <input type="checkbox" checked disabled> First Name
+                        </label>
+                    </div>
+
+                    <div class="labelCss col-md-2">
+                        <label>
+                            <input type="checkbox" checked disabled> Age
+                        </label>
+                    </div>
+                    <div class="labelCss col-md-2">
+                        <label>
+                            <input type="checkbox" checked disabled> Diabetic Status
+                        </label>
+                    </div>
+                    <div class="labelCss col-md-2">
+                        <label>
+                            <input type="checkbox" checked disabled> Diabetic Status
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-12" style="display:inline-block;margin:20px 0px;">
+                    <div class="col-md-4 labelCss ">
+                        <label class="">
+                            <input type="checkbox" checked disabled> Include Captcha Verification
+                        </label>
+                    </div>
+                    <div class="labelCss col-md-4">
+                        <label class="">
+                            <input type="checkbox" checked disabled> Include Privacy Policy
+                        </label>
+                    </div>
+                    <div class="labelCss col-md-4">
+                        <label class="">
+                            <input type="checkbox" checked disabled> Include Consent Acceptance
+                        </label>
+                    </div>
+                </div>
+            </div>*@
+
+        <div class="row appttitle2 ">
+            <div class="col-xs-12">@Resource.grpmail_list</div>
+        </div>
+
+
+        @*<div class="row">
+            <div class="col-xs-3">
+               Excel file
+            </div>
+            <div class="col-xs-3">
+                <label id="excel_select_count"></label> Emails found.   <a href="#" id="excelView">View List </a>
+            </div>
+            <div class="col-xs-3">
+                <a href="#" id="exceldelete"> Delete</a>
+            </div><div class="col-xs-3"></div>
+
+            </div>*@
+
+        <div class="row">
+
+
+            <div class="col-xs-3">
+                @Resource.rgevnt_addedemail
+            </div>
+            <div class="col-xs-3">
+                <label id="manual_select_count"></label> @Resource.rgevnt_mailadded  <a href="#" id="manualView" data-toggle="modal" data-target="#myModal">@Resource.rgevnt_vwlst </a>
+            </div>
+            <div class="col-xs-3">
+                <a href="#" id="manualdelete"> @Resource.cmnlbl_delete</a>
+            </div><div class="col-xs-3"></div>
+        </div>
+
+        <br />
+        <div class="row">
+            <div class="col-xs-12">
+                <button type="button" class="btn btn-primary
+                    appointment_upload_email-btn appointment-btn">
+                    @Html.TextBoxFor(model => model.Files, new { @class = "upload", @id = "fileToUpload", @multiple = "multiple", type = "file", name = "Files" })
+                </button>
+
+                <button type="button" id="btnemailmanually" data-toggle="modal" data-target="#myModal"
+                        class="btn btn-primary appointment-btn">
+                    @Resource.rgevnt_mailenter
+                </button>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-12 ">
+                <button type="submit" id="btncreate" class="btn  appointment-btn btn-primary" style="width:100%; color:white; height:50px;">@Resource.cmnlbl_create</button>
+            </div>
+        </div>
+
+
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header modalpopup-header" style="background-color: #658286; text-align: center;min-height:44px;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                        <div style="float: left; margin: 2px;">
+                            <p style="color:#fff;font-weight:bold;font-size:16px;" class="zeiss-font-Md">@Resource.rgevnt_maillist</p>
+                        </div>
+                        <div style="float: right; margin: 2px;">
+                        </div>
+                    </div>
+                    <div id="data" class="modal-body" style="margin:10px;">
+                        <div id='TextBoxesGroup'>
+                            <div class="userlist" id="TextBoxDiv1">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <input type='text' class="fname form-control" id='firstname' placeholder=@Resource.cmcnlbl_fname style="width:120px;">
+                                        <input type='text' class="lname form-control" id='lastname' placeholder=@Resource.cmcnlbl_lname style="width:120px;">
+                                        <input type='email' class="email form-control" id='email' placeholder=@Resource.cmnlbl_email style="width:180px;"><span style="color:red;">*</span>
+                                        @*<input type='button' class="remove" value='x'>*@
+
+                                        <button type="button" class=" remove btn add-option btn-success btn-sm pull-right" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    
+
+                        <div class="row">
+                            <div class="col-xs-12" style="float:left;">
+                                <button type="button" id='addButton' class="  btn add-option btn-success btn-sm pull-right" title="Add option" aria-label="Left Align" value=@Resource.rgevnt_addinvitees>
+                                    <span class="glyphicon" aria-hidden="true"></span>@Resource.rgevnt_addinvitees
+                                </button>
+
+                                @*<input type='button' value=@Resource.cmnlbl_save id='btnSave'>*@
+                                <button type="button" id='btnSave' class="  btn add-option btn-info btn-sm pull-right" title="Add option" aria-label="Left Align" value=@Resource.cmnlbl_save>
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>@Resource.cmnlbl_save
+                                </button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>

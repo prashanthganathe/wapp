@@ -357,15 +357,37 @@ FlowRouter.route('/pollresult/:pid', {
     }
 });
 
+/*FlowRouter.route('/pollcolumn', {
+     subscriptions: function(params) {
+     this.register('Questionaires', Meteor.subscribe('Questionaires'));
+},
+    action: function() {
+        BlazeLayout.render('mainlayout', {
+            content: 'pollcolumn'
+        });
+
+    }
+});*/
+
 
 
 FlowRouter.route('/pollcolumn', {
-    action: function() {
+    action: function(params, queryparams) {
         BlazeLayout.render('mainlayout', {
             content: 'pollcolumn'
         });
     }
 });
+
+
+/*FlowRouter.route('/pollquestioncolumn', {
+     subscriptions: function(params) {
+     this.register('Questionaires', Meteor.subscribe('Questionaires'));
+},
+    action: function() {      
+         FlowLayout.render('pollcolumn');
+    }
+});*/
 
 FlowRouter.route('/pollrespondentitem/:pid', {
     action: function(params, queryparams) {
@@ -374,3 +396,13 @@ FlowRouter.route('/pollrespondentitem/:pid', {
         });
     }
 });
+
+
+FlowRouter.route('/genericlogin', {
+    action: function(params, queryparams) {
+        BlazeLayout.render('mainlayout', {
+            content: 'genericlogin'
+        });
+    }
+});
+

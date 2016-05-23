@@ -1,28 +1,22 @@
 <template name="editquestion">
     <div class="container">
         <div class="col-xs-12 ">
-           
             <div class="row">
                 <div class="col-xs-6">
-                <h2><strong>Poll: {{getpollname}}</strong> </h2>
-                 
-
-                    <form  method="POST" enctype="multipart/form-data">
-                       {{#with getquestion}}
+                    <h2><strong>Poll: {{getpollname}}</strong> </h2>
+                    <form method="POST" enctype="multipart/form-data">
+                        {{#with getquestion}}
                         <div class="row">
                             <div class="form-group ">
                                 <div class="col-md-10">
                                     <label>
                                         <h4><strong>Edit Questionaire</strong></h4>
-                                        
-                                        </label>
-
+                                    </label>
                                     <textarea maxlength="900" rows="3" data-msg-required="Please enter Question" class="form-control" name="question" id="question" placeholder="Questions" value={{title}} required></textarea>
-                                    <button id={{_id}} type="button" class="btn delete-option btn-error btn-sm pull-right"  aria-label="Left Align" value="Delete Question">
-                                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Delete this Question
-                                            </button>
+                                    <button id={{_id}} type="button" class="btn delete-question btn-error btn-sm pull-right" aria-label="Left Align" value="Delete Question">
+                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Delete this Question
+                                    </button>
                                 </div>
-                       
                                 <div class="col-md-2">
                                 </div>
                             </div>
@@ -36,7 +30,7 @@
                                         <div class="input-group mb-md">
                                             <span class="input-group-addon btn-success" data-optionid={{this}}>{{incremented @index}}</span>
                                             <input name="option" type="text" value={{option}} placeholder="option" class="form-control" maxlength="400" required>
-                                            <span class="input-group-addon btn-warning delete-option" data-optionid={{option}}>x</span>
+                                            <!-- <span class="input-group-addon btn-warning delete-option"  data-optionid={{id}}>x</span> -->
                                         </div>
                                         {{/each}}
                                         <div class="btn-toolbar">
@@ -57,7 +51,6 @@
                         </div>
                         {{/with}}
                     </form>
-
                 </div>
             </div>
         </div>

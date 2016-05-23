@@ -1,0 +1,9 @@
+<template name="googlelogin">
+    {{#if currentUser}}
+    <button id="logout">Logout</button>
+    {{else}}   
+    <a id="google-login" class="genericlogin btn btn-link-1 btn-link-1-google-plus center-block" style="background: #dd4b39; color:white;" href="#">
+        <i class="fa fa-google-plus"></i> Google Plus
+    </a>
+    {{/if}}
+</template>
