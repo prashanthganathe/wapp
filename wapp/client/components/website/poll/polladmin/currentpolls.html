@@ -4,29 +4,7 @@
             <div class="offset-anchor" id="contact-sent"></div>
             <h2 class="mb-sm mt-sm"><strong>Existing Polls</strong></h2>
             <input type="hidden" value="true" name="emailSent" id="emailSent">
-            <!-- <div class="row">
-                <div class="form-group">
-                    <div class="col-md-9 ">                      
-
-                            <div class="form-group">
-                                            <label class="col-md-3 control-label">Select Poll </label>
-                                            <div class="col-md-8">
-                                            <select id="poll-select" class="form-control input-lg mb-md populate placeholder" >
-                                                   {{#each getpolllist}}
-                                                       <option value="{{_id}}">{{name}}</option>
-                                                   {{/each}}                                         
-                                                </select>
-                                            </div>
-                                        </div>
-
-                    </div>
-                    <div class="col-md-3">
-                        <button type="button" id="editpoll" class="btn add-option btn-success btn-sm pull-right" aria-label="Left Align" value="Add Option">
-                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add/Edit Questions
-                        </button>
-                    </div>
-                </div>
-            </div> -->
+         
             <div class="panel-body">
                 <table class="table table-no-more table-bordered table-striped mb-none">
                     <thead>
@@ -55,7 +33,9 @@
                             </td>
                             <td data-title="Change %" class="text-right">
                            
-                                {{> tinyanalytics _id}}
+                                <!-- {{> tinyanalytics _id}} -->
+
+                                <a href="/pollresponse/{{_id}}">Response</a>
                             </td>
                             <td data-title="Change %" class="text-right">
                              

@@ -49,9 +49,12 @@ Template.pollrespondentitem.events({
            
             Meteor.call('submitvote',questionSubmit,  function(error, result) {
                 if (error) {
-                    console.log('There was an error: ' + error.reason);
+                    //console.log('There was an error: ' + error.reason);
+                    sAlert.error('There was an error: ' + error.reason);
                 } else {
-                    console.log('vote is submitted');
+                   // console.log('vote is submitted');
+                     sAlert.success('Your vote is submitted.');
+                     FlowRouter.go('/createpoll');
                 }
 
             });

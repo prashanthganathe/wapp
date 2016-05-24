@@ -3,7 +3,7 @@
  */
 function builtColumn(title, subtitle, xAxis, yAxis, series) {
 
-    $('#container-column').highcharts({
+    $('.container-column').highcharts({
 
         chart: {
             type: 'column'
@@ -104,8 +104,8 @@ Template.pollcolumn.onCreated(function() {
             $.each(question.options, function(index, item) {
                 xAxis.categories.push(item.option);
                  var seriesobj = {
-                    name: index,
-                    data: [10]
+                    name: item.option,
+                    data: [0]
                 };
 
                 series.push(seriesobj);
@@ -125,7 +125,8 @@ Template.pollcolumn.onCreated(function() {
                /* console.log(item);
                 seriesobj.name = item;
                 seriesobj.data.push(item[]);*/
-                series[index].data=2;
+                var votecount = item[Object.keys(item)[0]];
+                series[index].data=[votecount];
 
                 
 

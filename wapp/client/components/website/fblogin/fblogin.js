@@ -8,6 +8,10 @@ Template.fblogin.events({
                 console.log(err);
                 throw new Meteor.Error("Facebook login failed");
             }
+            else
+            {
+                  FlowRouter.go('/freeservicedashboard');
+            }
             // console.log(Meteor.user().services.facebook.name);
             // console.log(Meteor.user().services.facebook.id);
             // console.log(Meteor.user().services.facebook.email);
@@ -18,7 +22,12 @@ Template.fblogin.events({
     'click #logout': function(event) {
         Meteor.logout(function(err) {
             if (err) {
-                throw new Meteor.Error("Logout failed");
+               // throw new Meteor.Error("Logout failed");
+                 sAlert.Error(err);
+            }
+            else
+            {
+                  sAlert.Success('Logged in successfully!');
             }
         })
     }

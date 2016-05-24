@@ -406,3 +406,27 @@ FlowRouter.route('/genericlogin', {
     }
 });
 
+
+FlowRouter.route('/pollresponse/:pid', {
+    action: function(params, queryparams) {
+        BlazeLayout.render('mainlayout', {
+            content: 'pollresponse'
+        });
+    }
+});
+
+FlowRouter.route('/newcharthelper', {
+    action: function(params, queryparams) {
+        BlazeLayout.render('mainlayout', {
+            content: 'newcharthelper'
+        });
+    }
+});
+
+FlowRouter.route('/pollsearch', {
+    action: function(params, queryparams) {
+        BlazeLayout.render('mainlayout', {
+            content: 'pollsearch'
+        });
+    }
+});

@@ -4466,3 +4466,5 @@ text-overflow: ellipsis;
   transform: rotate(0deg);
   transition: all 0.5s;
 }
+
+.highcharts-container{width:100% !important; height:100% !important;}

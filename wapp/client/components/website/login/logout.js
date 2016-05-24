@@ -4,6 +4,13 @@ Template.logout.events({
             // callback
             FlowRouter.go('/');
         });
+    },
+    'click #btnlogin': function(e) {
+      
+            FlowRouter.go('/login');
+       
     }
+
+    
 
 });

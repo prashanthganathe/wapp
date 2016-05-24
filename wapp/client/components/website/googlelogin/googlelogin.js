@@ -8,6 +8,10 @@ Template.googlelogin.events({
                 console.log(err);
                 throw new Meteor.Error("Facebook login failed");
             }
+             else
+            {
+                  FlowRouter.go('/freeservicedashboard');
+            }
             // console.log(Meteor.user().services.facebook.name);
             // console.log(Meteor.user().services.facebook.id);
             // console.log(Meteor.user().services.facebook.email);

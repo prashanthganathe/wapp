@@ -22,7 +22,7 @@ Template.pollquestion.events({
             options: options,
             pollid:Session.get('newpoll')._id,
             userid:Meteor.user()._id,
-            author: Meteor.user().emails[0].address
+            author: Meteor.user().profile.email
 
 
         };

@@ -1,3 +1,7 @@
-<template name="logout">
-  <a href="#" id="btnlogout">Logout</a>
+<template name="logout">  
+{{#if currentUser}}
+  <button type="button" class="btn btn-warning btn-xs" id="btnlogout">Logout</button>
+  {{else}}
+   <button type="button" class="btn btn-success btn-xs" id="btnlogin">Login</button>
+{{/if}}
 </template>

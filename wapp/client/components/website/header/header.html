@@ -45,9 +45,9 @@
                                         <!-- class="hidden-xs" -->
                                         <a href="contactus"><i class="fa fa-angle-right"></i> Contact Us</a>
                                     </li>
-                                    <!-- <li>
-												<span class="ws-nowrap"><i class="fa fa-email"></i> </span>
-											</li> -->
+                                    {{#if currentUser}}
+                                   		 <li>{{> logout}}</li>
+									{{/if}}	
                                 </ul>
                             </nav>
                         </div>

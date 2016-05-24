@@ -1,0 +1,57 @@
+<template name="pollresponse">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 ">
+                {{> pollheader}}
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-xs-6 col-xs-offset-2 ">
+        <h4>Total Questions : {{questioncount}} </h4>
+    </div>
+
+    <div class="col-xs-8 col-xs-offset-2">
+        <div class="panel-group wrap accord" id="accordion" role="tablist" aria-multiselectable="true">
+            {{#each getquestions}}
+
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" style="color:white;!important;" data-parent="#accordion" href="#{{_id}}{{@index}}" aria-expanded="true" aria-controls="{{_id}}{{@index}}">
+                     {{incremented @index}}. {{title}}
+                    </a>
+                  </h4>
+                </div>
+                <div id="{{_id}}{{@index}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="{{_id}}{{@index}}">
+                <div class="panel-body" style="scr">
+                    <div class="row">
+                            <div class="col-md-6">
+                               <ol>
+                                {{#each options }}                              
+                                	<li>{{option}} </li>
+                                {{/each}}
+                                </ol>
+                            </div>
+
+                     
+                        <div class="col-md-6">                          
+                          {{> newcharthelper qid=_id}}
+                        </div>
+                           </div>
+                    </div>
+                </div>
+            </div>
+
+            {{/each}}
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-6">
+                    <input type="submit" id="pollid" value="Submit" class="btn  btn-info btn-lg pull-right" />
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
