@@ -1,8 +1,8 @@
 
 .genericlogin input[type="text"], 
 input[type="password"], 
-textarea, 
-textarea.form-control {
+ 
+form-control {
 	height: 50px;
     margin: 0;
     padding: 0 20px;

@@ -35,7 +35,7 @@ Template.newcharthelper.helpers({
                     plotBorderWidth: null,
                     plotShadow: false,
                     width: 335,
-                    height:400
+                    height:300
                 },
                 title: {
                     text: "Opinions"//this.username + "'s top genres"

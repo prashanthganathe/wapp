@@ -10,7 +10,7 @@ Template.currentpolls.helpers({
                     .empty()
                     .qrcode({
                         text: $(e).attr('data-qrcode'),
-                         width: 128,
+                        width: 128,
                         height: 128,
                         colorDark: "#00ff00",
                         colorLight: "#ff008f"                     

@@ -20,14 +20,15 @@
 													<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
 												</span>
                                     </div>
+
                                 </form>
                             </div>
                             <nav class="header-nav-top">
                                 <ul class="nav nav-pills">
-                                   <!--  <li>
+                                    <!--  <li>
                                         <a href="/"><i class="fa fa-angle-right"></i> Home</a>
                                     </li> -->
-                                   <!--  <li>
+                                    <!--  <li>
                                         <a href="team"><i class="fa fa-angle-right"></i> Team</a>
                                     </li> -->
                                     <li>
@@ -45,9 +46,9 @@
                                         <!-- class="hidden-xs" -->
                                         <a href="contactus"><i class="fa fa-angle-right"></i> Contact Us</a>
                                     </li>
-                                    {{#if currentUser}}
-                                   		 <li>{{> logout}}</li>
-									{{/if}}	
+                                   
+                                    	<li>{{> logout}}</li>
+                                
                                 </ul>
                             </nav>
                         </div>
@@ -57,23 +58,24 @@
                                     <i class="fa fa-bars"></i>
                                 </button>
                                 <ul class="header-social-icons social-icons hidden-xs">
-                                    <li class="social-icons-facebook"><a href="https://www.facebook.com/Wapp-1576382492691215/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                    <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                    <li class="social-icons-facebook">
+                                    <a href="https://www.facebook.com/Wapp-1576382492691215/" target="_blank" title="Facebook" style="background-color: #3b5a9a !important; color: #fff !important;"><i class="fa fa-facebook"></i></a></li>
+                                    <!-- <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"  style="background-color: #1aa9e1 !important; color: #fff !important;"><i class="fa fa-twitter"></i></a></li>
+                                    
+                                    <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin" style="background-color: #0073b2 !important; color: #fff !important;"><i class="fa fa-linkedin"></i></a></li> -->
+
+                                  <!--   <li class="social-icons-googleplus"><a href="http://www.googleplus.com/" target="_blank" title="Googleplus" style="background-color: #dd4b39 !important; color: #fff !important;"><i class="fa fa-google-plus"></i></a></li> -->
+
                                 </ul>
                                 <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
                                     <nav class="header-nav-main" role="navigation">
                                         <ul class="nav nav-pills" id="mainNav">
-
-
-
-                                            {{> technologylist}} 
-                                            {{> clientlist}} 
+                                            {{> technologylist}} {{> clientlist}}
                                             <!--  {{> highservicelist}} -->
                                             <!-- {{> netservicelist}} -->
                                             <!--  {{> webservicelist}}
                                             {{> startupservicelist}} -->
-                                            {{> freeservices}} 
+                                            {{> freeservices}}
                                             <!-- <li class="dropdown dropdown-mega">
 														<a class="dropdown-toggle" href="#">
 															Shortcodes

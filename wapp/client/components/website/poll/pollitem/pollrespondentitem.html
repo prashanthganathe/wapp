@@ -1,50 +1,49 @@
 <template name="pollrespondentitem">
     <!-- <form method="POST" enctype="multipart/form-data"> -->
-  <div class="container">
-    <div class="row">
-    <div class="col-xs-12 ">
-    {{> pollheader}}
-    </div>
-    </div>
-  </div>
-        
-
-        <div class="col-xs-6 col-xs-offset-2 ">
-         <h4>Total Questions : {{questioncount}} </h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6  col-xs-6">
+                {{> pollheader}}
+                <div class="testqrcode" data-qrcode="{{someReactiveData}}"></div>
+            </div>
         </div>
-
-        <form>
-    <div class="col-xs-8 col-xs-offset-2">
-        <div class="panel-group wrap accord" id="accordion" role="tablist" aria-multiselectable="true">
-            {{#each getquestions}}
-            <div class="panel">
-                <div class="panel-heading" role="tab" id="headingOne">
-                    <h4 class="panel-title">
+    </div>
+    <div class="col-xs-6 col-xs-offset-2 ">
+        <h4>Total Questions : {{questioncount}} </h4>
+    </div>
+    <form>
+        <div class="col-xs-8 col-xs-offset-2">
+            <div class="panel-group wrap accord" id="accordion" role="tablist" aria-multiselectable="true">
+                {{#each getquestions}}
+                <div class="panel">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" style="color:white;!important;" data-parent="#accordion" href="#{{_id}}" aria-expanded="true" aria-controls="{{_id}}">
                      {{incremented @index}}. {{title}}
                     </a>
                   </h4>
+                    </div>
+                    <div id="{{_id}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="{{_id}}">
+                        <div class="panel-body">
+                            {{#each options }}
+                             <input name="{{../_id}}" class="" data-selected="{{id}}" type="radio"> {{option}}<br/>                          
+                            <!-- <div class="radio">
+                                <input type="radio" name="{{../_id}}" data-selected="{{id}}">
+                                <label for="{{../_id}}"> {{option}}</label>
+                            </div> --> <!--  js has to be implemented -->
+                            {{/each}}
+                        </div>
+                    </div>
                 </div>
-                <div id="{{_id}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="{{_id}}">
-                    <div class="panel-body">
-                        {{#each options }}
-                            <input name="{{../_id}}" class="" data-selected="{{id}}" type="radio"> {{option}}<br/> 
-                        {{/each}}
+                {{/each}}
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <input type="submit" id="pollid" value="Submit" class="btn  btn-info btn-lg pull-right" />
                     </div>
                 </div>
             </div>
-            {{/each}}
         </div>
-        <div class="row">
-            <div class="form-group">
-                <div class="col-md-6">
-                    <input type="submit" id="pollid" value="Submit" class="btn  btn-info btn-lg pull-right" />
-                </div>
-            </div>
-        </div>
-    </div>
-    </form> 
+    </form>
 </template>
-
-
-

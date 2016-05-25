@@ -4,6 +4,28 @@ Template.pollrespondentitem.helpers({
     },
     questioncount: function() {
         return Questionaires.find({ 'pollid': FlowRouter.getParam('pid') }).count();
+    },
+
+    someReactiveData: function() {
+        //$(e).attr('data-qrcode')
+        //Meteor.absoluteUrl+"/pollrespondentitem/"+FlowRouter.getParam('pid')
+        Tracker.afterFlush(function() {     
+            $('.testqrcode').each(function(i, e) {
+                $(e)
+                    .empty()
+                    .qrcode({
+                        text: $(e).attr('data-qrcode'),
+                        width: 200,
+                        height: 200,
+                        colorDark: "#00ff00",
+                        colorLight: "#ff008f"
+                       
+                         
+
+                    });
+            });
+         });
+        return Meteor.absoluteUrl()+"/pollrespondentitem/"+FlowRouter.getParam('pid');
     }
 });
 
@@ -25,6 +47,14 @@ Template.pollrespondentitem.rendered = function() {
 
 
 Template.pollrespondentitem.events({
+/*$(input[type=radio]).click(function() {
+    //$(this).addClass('active').siblings().removeClass('active');
+
+    // TODO: insert whatever you want to do with $(this) here
+});*/
+
+
+
     'submit form': function(e) {
         if (!Meteor.userId()) {
             alert("You are required to login to vote");
