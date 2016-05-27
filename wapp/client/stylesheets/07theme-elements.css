@@ -515,7 +515,7 @@ html.boxed .nav-secondary.sticky-active {
 
 .btn-primary {
 	border-color: #CCC;
-	background-color: #CCC;
+	
 	border-color: #CCC #CCC #b3b3b3;
 	color: #FFF;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -5643,6 +5643,9 @@ section.timeline .timeline-box .owl-carousel {
 .social-icons li:hover.social-icons-facebook a {
 	background: #3b5a9a;
 }
+.social-icons li:hover.social-icons-whatsapp a {
+	background: #43d854;
+}
 
 .social-icons li:hover.social-icons-linkedin a {
 	background: #0073b2;
@@ -7902,7 +7905,11 @@ ul.history li .featured-box .box-content {
 	color: #fff;
 }
 
-
+.social-icons-whatsapp
+{
+	background-color: #43d854;
+	color: #fff;
+}
 .social-icons-twitter
 {
 	background-color: #1aa9e1;

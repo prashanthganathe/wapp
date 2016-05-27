@@ -1723,7 +1723,7 @@ html[dir="rtl"] #header .header-search .btn-default {
 
 /* Page Header Custom - Create your Own */
 .page-header.custom-product {
-	background-image: url(../img/custom-header-bg.jpg);
+	background-image: url(../website/img/custom-header-bg.jpg);
 	background-repeat: repeat;
 	background-color: #999;
 	border-top: 5px solid #888;
@@ -1850,7 +1850,7 @@ section.section.section-overlay {
 section.section.section-overlay:before {
 	content: "";
 	display: block;
-	background: url("../img/video-overlay.png") repeat scroll 0 0 transparent;
+	background: url("../website/img/video-overlay.png") repeat scroll 0 0 transparent;
 	bottom: 0;
 	height: 100%;
 	left: 0;
@@ -2167,7 +2167,7 @@ html.boxed .slider-container {
 
 /* Custom Map */
 section.section-custom-map {
-	background: transparent url(../img/map.png) center 0 no-repeat;
+	background: transparent url(../website/img/map.png) center 0 no-repeat;
 	padding: 129px 0 0;
 	margin: 20px 0 0;
 	border: 0;
@@ -2179,7 +2179,7 @@ section.section-custom-map section.section {
 }
 
 section.section-custom-map-2 {
-	background: transparent url(../img/map-2.png) center 0 no-repeat;
+	background: transparent url(../website/img/map-2.png) center 0 no-repeat;
 	padding: 129px 0 0;
 	margin: 50px 0 0;
 	border: 0;
@@ -2289,7 +2289,7 @@ section.section-custom-map-2 section.section {
 }
 /* Home Concept */
 .home-concept {
-	background: transparent url(../img/home-concept.png) no-repeat center 0;
+	background: transparent url(../website/img/home-concept.png) no-repeat center 0;
 	width: 100%;
 	overflow: hidden;
 }
@@ -2308,7 +2308,7 @@ section.section-custom-map-2 section.section {
 }
 
 .home-concept .process-image {
-	background: transparent url(../img/home-concept-item.png) no-repeat 0 0;
+	background: transparent url(../website/img/home-concept-item.png) no-repeat 0 0;
 	width: 160px;
 	margin: 135px auto 0 auto;
 	padding-bottom: 50px;
@@ -2331,7 +2331,7 @@ section.section-custom-map-2 section.section {
 }
 
 .home-concept .project-image {
-	background: transparent url(../img/home-concept-item.png) no-repeat 100% 0;
+	background: transparent url(../website/img/home-concept-item.png) no-repeat 100% 0;
 	width: 350px;
 	margin: 15px 0 0 -30px;
 	padding-bottom: 45px;
@@ -2340,7 +2340,7 @@ section.section-custom-map-2 section.section {
 }
 
 .home-concept .sun {
-	background: transparent url(../img/home-concept-icons.png) no-repeat 0 0;
+	background: transparent url(../website/img/home-concept-icons.png) no-repeat 0 0;
 	width: 60px;
 	height: 56px;
 	display: block;
@@ -2350,7 +2350,7 @@ section.section-custom-map-2 section.section {
 }
 
 .home-concept .cloud {
-	background: transparent url(../img/home-concept-icons.png) no-repeat 100% 0;
+	background: transparent url(../website/img/home-concept-icons.png) no-repeat 100% 0;
 	width: 116px;
 	height: 56px;
 	display: block;
@@ -2987,7 +2987,7 @@ html.dark .text-muted {
 }
 
 #footer .footer-ribbon {
-	background: #999;
+	background: #0088CC;
 	position: absolute;
 	margin: -90px 0 0 14px;
 	padding: 10px 20px 6px 20px;
@@ -3607,7 +3607,7 @@ html.dark .theme-default .nivoSlider {
 }
 
 html.dark section.section-custom-map {
-	background: transparent url(../img/map-dark.png) center 0 no-repeat;
+	background: transparent url(../website/img/map-dark.png) center 0 no-repeat;
 }
 
 html.dark section.section-custom-map section.section {
@@ -3616,23 +3616,23 @@ html.dark section.section-custom-map section.section {
 }
 
 html.dark .home-concept {
-	background-image: url(../img/home-concept-dark.png);
+	background-image: url(../website/img/home-concept-dark.png);
 }
 
 html.dark .home-concept .process-image {
-	background-image: url(../img/home-concept-item-dark.png);
+	background-image: url(../website/img/home-concept-item-dark.png);
 }
 
 html.dark .home-concept .project-image {
-	background-image: url(../img/home-concept-item-dark.png);
+	background-image: url(../website/img/home-concept-item-dark.png);
 }
 
 html.dark .home-concept .sun {
-	background-image: url(../img/home-concept-icons-dark.png);
+	background-image: url(../website/img/home-concept-icons-dark.png);
 }
 
 html.dark .home-concept .cloud {
-	background-image: url(../img/home-concept-icons-dark.png);
+	background-image: url(../website/img/home-concept-icons-dark.png);
 }
 
 html.dark .page-header {
@@ -3767,7 +3767,7 @@ html.dark .progress {
 }
 
 html.dark .arrow {
-	background-image: url(../img/arrows-dark.png);
+	background-image: url(../website/img/arrows-dark.png);
 }
 
 html.dark .thumbnail,
@@ -3957,7 +3957,7 @@ html.dark .heading.heading-middle-border h1, html.dark .heading.heading-middle-b
 }
 
 html.dark ul.history li .thumb {
-	background-image: url(../img/history-thumb-dark.png);
+	background-image: url(../website/img/history-thumb-dark.png);
 }
 
 html.dark .recent-posts .date .day {
@@ -4562,3 +4562,13 @@ text-overflow: ellipsis;
 .radio-success input[type="radio"]:checked + label::after {
   background-color: #5cb85c; }
 
+
+.s-alert-info, .s-alert-success, .s-alert-warning, .s-alert-error
+{
+	color: :#fff;
+}
+/*
+.s-alert-error.s-alert-effect-scale {
+    background: #bada55;  
+    color: #fff 
+}*/

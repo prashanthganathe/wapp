@@ -16,7 +16,7 @@ Template.loginform.events({
         else
         {
             sAlert.success('Successfully Loggedin.');
-           // FlowRouter.redirect('/freeservicedashboard');
+            FlowRouter.redirect('/');
 
         }
     });

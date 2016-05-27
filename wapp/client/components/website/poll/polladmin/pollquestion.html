@@ -2,20 +2,20 @@
     <form id="contactFormAdvanced" method="POST" enctype="multipart/form-data">
         <div class="row">
             <div class="form-group {{errorClass 'title'}}">
-                <div class="col-md-10">
+                <div class="col-xs-10">
                     <label>
                         <h4><strong>Create Questionaire</strong></h4></label>
                     <textarea maxlength="900" rows="3" data-msg-required="Please enter Question" class="form-control" name="question" id="question" placeholder="Questions" required></textarea>
                     <span class="help-block">{{errorMessage 'title'}}</span>
                 </div>
-                <div class="col-md-2">
+                <div class="col-xs-2">
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="form-group {{errorClass 'options'}}">                
-                <div class="form-group col-md-12">               
-                <div class="col-md-10">
+                <div class="form-group col-xs-12">               
+                <div class="col-xs-10">
                  <label >Options</label>
                 	 {{#each pollOptions}}
                     <div class="input-group mb-md">
@@ -35,7 +35,7 @@
         </div>
         <div class="row">
             <div class="form-group">
-                <div class="col-md-6">
+                <div class="col-xs-6">
                     <input type="submit" id="btnaddmorequestions" value="Add more Question" class="btn btn-info btn-lg pull-right" />
                 </div>            
             </div>
@@ -43,7 +43,7 @@
     </form>
     <div class="row">
         <div class="form-group">
-            <div class="col-md-6">
+            <div class="col-xs-6">
                 <div id="dynamicquestion"></div>
             </div>
         </div>

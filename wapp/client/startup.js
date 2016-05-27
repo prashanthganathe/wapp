@@ -15,7 +15,7 @@ Meteor.startup(function () {
         effect: '',
         position: 'bottom-right',
         timeout: 5000,
-        html: false,
+        html: true,
         onRouteClose: true,
         stack: true,       
         offset: 0, // in px - will be added to first alert (bottom or top - depends of the position in config)

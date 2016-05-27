@@ -10,6 +10,12 @@ Template.register.events({
 
                 var email = $('#email').val();
                 var password = $('#password').val();
+                var confirmpassword = $('#confirmpassword').val();
+                if(password !==confirmpassword)
+                {
+                    sAlert.error('Password is not matching, please correct and retry!');
+                    return;
+                }
                 var data={};
                 data.email=email;
                 data.password=password;
@@ -20,12 +26,15 @@ Template.register.events({
                  Meteor.call('createUserWithRole', data,roles, function(error, result) {
                     if(error)
                     {
-
+                         sAlert.error('Some problem with Registration, please retry with other credentials.');
+                        
                     }
                     else
                     {
-                        console.log('created successfully');
+                         sAlert.success('Successfully Registered. Please login to proceed. ');
+                          FlowRouter.go('/login');
                     }
+
                  });
 
                /* Accounts.createUser({
