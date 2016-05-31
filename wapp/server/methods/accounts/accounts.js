@@ -68,6 +68,8 @@ Accounts.onCreateUser(function(options, user) {
 
     //Send WelcomeEmail
     //  Meteor.call('SendWelcomeMail',user.profile.email);
+    console.log(user);
+    Meteor.call('SendWelcomeMail',user.profile.email,user);
      return user;
 
 });

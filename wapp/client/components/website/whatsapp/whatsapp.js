@@ -1,6 +1,6 @@
 Template.whatsapp.helpers({
    sharetext: function(){
-      return FlowRouter.current();
+      return "http://wapp.co.in"+FlowRouter.current().path;
    }
    
 });

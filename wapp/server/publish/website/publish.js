@@ -42,4 +42,10 @@ Meteor.publish(null, function (){
   return Meteor.users.find({})
 });
 
+Meteor.publish(null, function() {
+  return Meteor.users.find(this.userId, { fields: { 
+    'services.google.accessToken': 1, 
+    'services.google.expiresAt': 1 
+  }});
+});
 

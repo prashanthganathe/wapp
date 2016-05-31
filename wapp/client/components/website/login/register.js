@@ -31,7 +31,7 @@ Template.register.events({
                     }
                     else
                     {
-                         sAlert.success('Successfully Registered. Please login to proceed. ');
+                         sAlert.success('Successfully Registered. Please check your email to activate and proceed. ');
                           FlowRouter.go('/login');
                     }
 

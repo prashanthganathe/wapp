@@ -6,7 +6,7 @@ Template.googlelogin.events({
         Meteor.loginWithGoogle({requestPermissions: ['email', 'profile']}, function(err) {
             if (err) {
                 console.log(err);
-                throw new Meteor.Error("Facebook login failed");
+                throw new Meteor.Error("Google login failed");
             }
              else
             {

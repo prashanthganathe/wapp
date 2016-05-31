@@ -7,11 +7,11 @@
                 <input type="hidden" value="true" name="emailSent" id="emailSent">
                 <div class="row">
                     <div class="form-group">
-                        <div class="col-xs-6">
+                        <div class="col-xs-10">
                             <label>Poll name *</label>
                             <input type="text" value="" data-msg-required="Please enter Poll name." maxlength="100" class="form-control" name="name" id="name" required>
                         </div>
-                        <div class="col-xs-6">
+                        <div class="col-xs-6 hidden-xs ">
                             <label>email address *</label>
                             <input type="email" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" value="{{useremail}}" disabled> If the email ID does not belongs to you, kindly logout and login with your credentials. 
                             {{> logout}}
@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input type="submit" id="btncreatepoll" value="Save and create Questionaires >>" class="btn btn-info btn-lg pull-right">
+                            <input type="submit" id="btncreatepoll" value="Save and create Questionaires" class="btn btn-info btn-lg pull-right">
                         </div>
                     </div>
                 </div>

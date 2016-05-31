@@ -5,28 +5,33 @@
             <h2 class="mb-sm mt-sm"><strong>Existing Polls</strong></h2>
             <input type="hidden" value="true" name="emailSent" id="emailSent">
          
+
+               <!--  {{#if nonZeroQuestionaires}} -->
+
             <div class="panel-body">
                 <table class="table table-no-more table-bordered table-striped mb-none">
                     <thead>
                         <tr>
                             <th></th>
-                            <th class="hidden-xs hidden-sm">Name</th>
+                            <th class="hidden-xs ">Name</th>
                             <th class="text-right">Share</th>
                           <!--   <th class="text-right hidden-xs hidden-sm">Type</th> -->
-                            <th class="text-right">CreatedOn</th>
+                            <th class="text-right hidden-sm">CreatedOn</th>
                             <th class="text-right"></th>
                             <th class="text-right">Analytics</th>
                             <th class="text-right"></th>
                         </tr>
                     </thead>
                     <tbody>
+
+
                         {{#each getpolllist}}
                         <tr>
                             <td data-title="Code">{{incremented @index}}</td>
-                            <td data-title="Company" class="hidden-xs hidden-sm">{{name}}</td>
+                            <td data-title="Name">{{name}}</td>
                             <td data-title="Price" class="text-right">{{share}}</td>
                             <!-- <td data-title="Change" class="text-right hidden-xs hidden-sm">{{type}}</td> -->
-                            <td data-title="Change %" class="text-right">{{livestamp summitted}}</td>
+                            <td data-title="Change %" class="text-right hidden-sm">{{livestamp summitted}}</td>
                             <td data-title="" class="text-right">
                                 <!-- <div class="testqrcode" data-qrcode="{{getqrcode _id}}"></div> -->
                                 <div class="link"><a href="../pollrespondentitem/{{ _id}}">Share</a></div>
@@ -58,6 +63,9 @@
                     </tbody>
                 </table>
             </div>
+               <!--  {{else}}
+                    No questions exists. Please add questions
+            {{/if}} -->
         </div>
     </div>
 </template>

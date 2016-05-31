@@ -1,4 +1,16 @@
 /*https://meteorhacks.com/flow-router-and-subscription-management/*/
+/*
+FlowRouter.route('/blog/:postId', {
+    subscriptions: function(params) {
+        console.log("subscribe and register this subscription as 'myPost'");
+        this.register('myPost', Meteor.subscribe('blogPost', params.postId));
+    },
+    action: function(params) {
+        console.log("Yeah! We are on the post:", params.postId);
+        // You can use Flow Layout to render templates here
+    }
+});
+*/
 
 
 Meteor.navigateTo = function(path) {
@@ -430,3 +442,12 @@ FlowRouter.route('/pollsearch', {
         });
     }
 });
+
+FlowRouter.route('/useractivate', {
+    action: function(params, queryparams) {
+        BlazeLayout.render('mainlayout', {
+            content: 'useractivate'
+        });
+    }
+});
+

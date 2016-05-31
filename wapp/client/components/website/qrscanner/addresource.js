@@ -14,11 +14,12 @@ Template.addresource.helpers({
                     .empty()
                     .qrcode({
                         text: $(e).attr('data-qrcode'),
+                        width: 228,
+                        height: 228,
                         colorDark: "#00ff00",
                         colorLight: "#ff008f"
                         //correctLevel: QRCode.CorrectLevel.H
-                            // width: 128,
-                            // height: 128,
+                            // 
 
                     });
             });

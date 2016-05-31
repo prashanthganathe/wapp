@@ -2,6 +2,9 @@ Template.currentpolls.helpers({
     getpolllist: function() {
         return Polls.find({'userid':Meteor.user()._id});      
     } ,
+    // nonZeroQuestionaires:function(){
+    //     return Polls.find({'userid':Meteor.user()._id}).count>0;      
+    // },
 
     getqrcode: function(id) { 
      Tracker.afterFlush(function() {     
