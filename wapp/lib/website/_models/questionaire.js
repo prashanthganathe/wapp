@@ -25,7 +25,13 @@ Questionaire = new SimpleSchema({
     votes: { type: Object, label: "votes", optional: true },
     answer: { type: String, label: "answer", optional: true },
     answerdescription: { type: String, label: "description", optional: true },
-    authorizerequired: { type: Boolean, label: "isauthorized", defaultValue: false, optional: true }
+    authorizerequired: { type: Boolean, label: "isauthorized", defaultValue: false, optional: true },
+
+    multiplechoice: { type: Boolean, label: "isMultiplechoice", defaultValue: false, optional: true },
+    comments: { type: String, label: "comments",  optional: true },
+    status:   { type: Boolean, label: "Active", defaultValue: true, optional: true },
+    validfrom: { type: Date, defaultValue: new Date(), optional: true },
+    validto:   { type: Date, defaultValue: new Date(new Date().getTime()+(30*24*60*60*1000)), optional: true }
 
 
 

@@ -1,4 +1,8 @@
 <template name="newcharthelper">
-	{{> highchartsHelper  chartWidth="100%" charHeight="70%" chartId=qid chartObject=(topGenresChart qid) }}
+	<select id="selecttype" class="form-control mb-md">
+		<option value="column">Column</option>
+		<option value="pie">Pie</option>		
+	</select>
+	{{> highchartsHelper  chartWidth="100%" charHeight="70%" chartId=qid chartObject=(topGenresChart qid getGraphType) }}
 </template>
 

@@ -67,7 +67,7 @@ meteorhacks:ssr
 http
 percolatestudio:synced-cron
 
-#simple:reactive-method
+simple:reactive-method
 
 
 #peerlibrary:reactive-publish
@@ -92,3 +92,4 @@ maazalik:highcharts
 fortawesome:fontawesome
 less
 lepozepo:s3
+webtempest:animate

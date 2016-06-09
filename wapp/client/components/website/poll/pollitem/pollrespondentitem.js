@@ -25,7 +25,7 @@ Template.pollrespondentitem.helpers({
                     });
             });
          });
-        return Meteor.absoluteUrl()+"/pollrespondentitem/"+FlowRouter.getParam('pid');
+        return Meteor.absoluteUrl()+"pollrespondentitem/"+FlowRouter.getParam('pid');
     }
 });
 
@@ -69,27 +69,31 @@ Template.pollrespondentitem.events({
         var votes = $('[type=radio]:checked');
         var questionSubmit={};
          questionSubmit.userId=Meteor.userId();
-        var pollsubmit = _.map(votes, function(value, key) {
-          //  var transfer = {};
-           // transfer[$(value).attr('name')] = $(value).attr('data-selected');
 
-            
+        /* var result = Meteor.call("submitvotes",votes,questionSubmit);
+         if(result)
+         {
+             sAlert.success('Your vote is submitted.');
+             FlowRouter.go('/createpoll');
+         }
+         else
+         {
+            sAlert.error('Ooops, could not able to submit your response.');
+         }*/
+
+        var pollsubmit = _.map(votes, function(value, key) {          
             questionSubmit.qId =$(value).attr('name');
-            questionSubmit.optionId=$(value).attr('data-selected');
-           
+            questionSubmit.optionId=$(value).attr('data-selected');           
             Meteor.call('submitvote',questionSubmit,  function(error, result) {
                 if (error) {
                     //console.log('There was an error: ' + error.reason);
                     sAlert.error('There was an error: ' + error.reason);
                 } else {
-                   // console.log('vote is submitted');
-                     sAlert.success('Your vote is submitted.');
-                     FlowRouter.go('/createpoll');
+                   // console.log('vote is submitted');                   
                 }
-
-            });
-            //$('[type=radio]:checked').attr('name')
-
+            });           
         });
+
+         
     }
 });

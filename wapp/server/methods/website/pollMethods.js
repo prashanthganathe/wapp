@@ -7,7 +7,7 @@ function createJSON(propertyName, value) {
 
 Meteor.methods({
     createPoll: function(poll) {
-
+        console.log(poll);
         var newpoll = Polls.insert(poll);
         return newpoll;
     },
@@ -41,8 +41,8 @@ Meteor.methods({
                 votes[value.id]=0;
             });
             question.votes= votes;*/
-        console.log('after map');
-        console.log(question);
+       // console.log('after map');
+       // console.log(question);
         /*  for (var i = 0; i < question.options.length; i++) {
 
               question.votes[question.options[i].id] = 0;
@@ -67,7 +67,7 @@ Meteor.methods({
         //console.log(question);
 
         var questionid = Questionaires.insert(questionfinal);
-        console.log(votes);
+       // console.log(votes);
         /*  Questionaires.update({
                    _id: questionid
                  }, {
@@ -96,33 +96,8 @@ Meteor.methods({
     pollDelete: function(pollId) {
         Polls.remove(pollid);
     },
-
-    submitvote: function(questionSubmit) {
-        /* check(this.userId, String);
-         check(pollId, String);
-         check(optionId, String);*/
-
-        console.log('submitvote');
-        console.log(questionSubmit);
-        //https://www.wiredprairie.us/blog/index.php/archives/1895
-
-        /*  db.getCollection('questionaires').update( 
-              { '_id': 'd9LAWL2TiSs6mYzdW'},    
-              {  $inc : {"votes.1.o1":1, voteCount:1},
-                 $addToSet : { voters: 'useridsf' }              
-                  }    
-              )*/
-
-
-        /* var ud = { $inc: {} };
-         ud.$inc['votes.' + questionSubmit.optionId] = 1;
-         ud.$inc['voteCount'] = 1;
-         ud.$addToSet = { voters: questionSubmit.userId };
-
-         console.log('ud');
-         console.log(ud);*/
-
-        // db.collection.update({a:1, "b._id":341445} , {$inc:{"b.$.c":1}})
+   
+    submitvote: function(questionSubmit) {    
 
         var incobj = {};
         incobj["votes." + questionSubmit.optionId[1] + "." + questionSubmit.optionId] = 1;

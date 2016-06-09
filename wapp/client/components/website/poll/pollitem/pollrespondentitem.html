@@ -1,18 +1,18 @@
 <template name="pollrespondentitem">
     <!-- <form method="POST" enctype="multipart/form-data"> -->
     <div class="container">
-        <div class="row">
-            <div class="col-xs-6  col-xs-6">
+        <div class="row center">
+            <div class="col-md-8 col-md-offset-2 ">
                 {{> pollheader}}
                 <div class="testqrcode" data-qrcode="{{someReactiveData}}"></div>
             </div>
         </div>
     </div>
-    <div class="col-xs-8 col-xs-offset-2">
+    <div class="col-md-8 col-md-offset-2">
         <h4>Total Questions : {{questioncount}} </h4>
     </div>
     <form>
-        <div class="col-xs-8 col-xs-offset-2">
+        <div class="col-md-8 col-md-offset-2">
             <div class="panel-group wrap accord" id="accordion" role="tablist" aria-multiselectable="true">
                 {{#each getquestions}}
                 <div class="panel">
@@ -26,21 +26,21 @@
                     <div id="{{_id}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="{{_id}}">
                         <div class="panel-body">
                             {{#each options }}
-                             <input name="{{../_id}}" class="" data-selected="{{id}}" type="radio"> {{option}}<br/>                          
-                            <!-- <div class="radio">
-                                <input type="radio" name="{{../_id}}" data-selected="{{id}}">
-                                <label for="{{../_id}}"> {{option}}</label>
-                            </div> --> <!--  js has to be implemented -->
+                             <input name="{{../_id}}" class="" data-selected="{{id}}" type="radio"> {{option}}<br/>    
+                            <!-- <div>
+                                <input type="radio" id="{{_id}}" name="{{../_id}}" />
+                                <label for="{{_id}}"><span></span>{{option}}</label>
+                            </div> -->
                             {{/each}}
                         </div>
                     </div>
                 </div>
                 {{/each}}
             </div>
-            <div class="row">
+            <div class="row center">
                 <div class="form-group">
-                    <div class="col-xs-6">
-                        <input type="submit" id="pollid" value="Submit" class="btn  btn-info btn-lg pull-right" />
+                    <div class="col-md-12">
+                        <input type="submit" id="pollid" value="Submit your Answers" class="btn  btn-info btn-lg pull-right" width="100%" />
                     </div>
                 </div>
             </div>

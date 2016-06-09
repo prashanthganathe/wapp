@@ -50,7 +50,7 @@ Accounts.onCreateUser(function(options, user) {
     //Roles.addUsersToRoles(user._id, ['User','Admin']);
 
     // var categories = categories.find();
-     user.profile.category = [];
+    //user.profile.category = [];
 
     // _.map(categories, function(item, index) {
     //     user.profile.category.push(item.name);
@@ -69,7 +69,9 @@ Accounts.onCreateUser(function(options, user) {
     //Send WelcomeEmail
     //  Meteor.call('SendWelcomeMail',user.profile.email);
     console.log(user);
-    Meteor.call('SendWelcomeMail',user.profile.email,user);
-     return user;
+    //try {
+        //Meteor.call('SendWelcomeMail', user.profile.email, user);
+    //} catch {}
+    return user;
 
 });

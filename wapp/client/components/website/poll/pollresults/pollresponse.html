@@ -30,14 +30,14 @@
                             <div class="col-md-6">
                                <ol>
                                 {{#each options }}                              
-                                	<li>{{option}} </li>
+                                	 <li>{{incremented @index}}. {{option}} </li>
                                 {{/each}}
                                 </ol>
                             </div>
 
-                     
+                        
                         <div class="col-md-6">                          
-                          {{> newcharthelper qid=_id}}
+                             {{> newcharthelper qid=_id type="column"}}
                         </div>
                            </div>
                     </div>

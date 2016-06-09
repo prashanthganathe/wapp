@@ -1,5 +1,26 @@
+
+
+
+Template.newcharthelper.events({
+  
+
+    "change #selecttype": function (event, template) {
+        var type = $(event.currentTarget).val();
+        console.log("category : " + type);
+       Session.setPersistent('graphtype',type);
+    }
+
+
+
+    });
+
 Template.newcharthelper.helpers({
-    topGenresChart: function(qid) {
+
+    getGraphType:function(){
+
+        return Session.get('graphtype')==undefined?"column":Session.get('graphtype');
+    },
+    topGenresChart: function(qid, type) {
         console.log('questionid:  '+ qid);
 
         var question = Questionaires.findOne({ '_id': qid});
@@ -10,7 +31,7 @@ Template.newcharthelper.helpers({
 
             var series = [];
             var obj = {};
-            obj.type = 'column';
+            obj.type = type;
             obj.name = 'Response';
             obj.data = [];
 
