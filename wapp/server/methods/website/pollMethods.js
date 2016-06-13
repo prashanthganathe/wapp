@@ -97,7 +97,32 @@ Meteor.methods({
         Polls.remove(pollid);
     },
    
-    submitvote: function(questionSubmit) {    
+       submitvote: function(questionSubmit) {
+        /* check(this.userId, String);
+         check(pollId, String);
+         check(optionId, String);*/
+
+        console.log('submitvote');
+        console.log(questionSubmit);
+        //https://www.wiredprairie.us/blog/index.php/archives/1895
+
+        /*  db.getCollection('questionaires').update( 
+              { '_id': 'd9LAWL2TiSs6mYzdW'},    
+              {  $inc : {"votes.1.o1":1, voteCount:1},
+                 $addToSet : { voters: 'useridsf' }              
+                  }    
+              )*/
+
+
+        /* var ud = { $inc: {} };
+         ud.$inc['votes.' + questionSubmit.optionId] = 1;
+         ud.$inc['voteCount'] = 1;
+         ud.$addToSet = { voters: questionSubmit.userId };
+
+         console.log('ud');
+         console.log(ud);*/
+
+        // db.collection.update({a:1, "b._id":341445} , {$inc:{"b.$.c":1}})
 
         var incobj = {};
         incobj["votes." + questionSubmit.optionId[1] + "." + questionSubmit.optionId] = 1;

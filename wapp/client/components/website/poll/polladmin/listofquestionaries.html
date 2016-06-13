@@ -1,24 +1,14 @@
 <template name="listofquestionaires">
-        <h3 class="center">{{questioncount}} Questions</h3> 
+        <h3 class="center"><a href="../createpoll">My Polls</a> <span style="font-size: 20px;">{{questioncount}} Questions </span></h3>
+        
         <div class="form-group">
-            <div class="col-xs-12">
-                <!-- <ul class="question">
-                    {{#each getquestionares}}
-                    <li class="list orange ellipsis">                 
-                        <a class="edit" id={{_id}} >                            
-                            {{incremented @index}}. {{title}}  [Votes: {{voteCount}}]</a>
-                    </li>
-                    {{/each}}
-                </ul> -->
-
+            <div class="col-xs-12">               
                 <ol class="rectangle-list">
                     {{#each getquestionares}}
                     <li> <a class="edit" id={{_id}} style="text-align:left;">                            
                             {{title}}  [Votes: {{voteCount}}] <span>Edit</span></a></li>
                   {{/each}}
                 </ol>
-
-
             </div>
         </div>
 

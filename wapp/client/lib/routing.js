@@ -262,6 +262,30 @@ FlowRouter.route('/cloudconsultancy', {
         });
     }
 });
+FlowRouter.route('/mobile', {
+    action: function() {
+        BlazeLayout.render('mainlayout', {
+            content: 'mobile'
+        });
+    }
+});
+
+FlowRouter.route('/web', {
+    action: function() {
+        BlazeLayout.render('mainlayout', {
+            content: 'web'
+        });
+    }
+});
+FlowRouter.route('/projectconsultancy', {
+    action: function() {
+        BlazeLayout.render('mainlayout', {
+            content: 'projectconsultancy'
+        });
+    }
+});
+
+
 
 FlowRouter.route('/freeservicedashboard', {
     action: function() {
@@ -450,4 +474,13 @@ FlowRouter.route('/useractivate', {
         });
     }
 });
+
+FlowRouter.route('/thankyou', {
+    action: function(params, queryparams) {
+        BlazeLayout.render('mainlayout', {
+            content: 'thankyou'
+        });
+    }
+});
+
 

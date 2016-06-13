@@ -19,6 +19,7 @@ Template.newPoll.events({
         poll.email = $('#email').val();
         poll.description = $('#descripiton').val();
         poll.userid = Meteor.user()._id;
+        poll.comments=new Array();
         //poll.share
         var pollid = Polls.insert(poll, function(err, res) {
                                     if (err) {

@@ -1,74 +1,74 @@
 <template name="currentpolls">
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-12 col-md-offset-0">
         <div class="row">
             <div class="offset-anchor" id="contact-sent"></div>
             <h2 class="mb-sm mt-sm"><strong>Existing Polls- {{getpolllistcount}}</strong></h2>
             <input type="hidden" value="true" name="emailSent" id="emailSent">
-         
-
-               <!--  {{#if nonZeroQuestionaires}} -->
-
+            <!--  {{#if nonZeroQuestionaires}} -->
             <div class="panel-body">
                 <table class="table table-no-more table-bordered table-striped mb-none">
                     <thead>
                         <tr>
                             <th></th>
-                            <th class="hidden-xs ">Name</th>
-                             <th class="hidden-xs ">Questions</th>
-                            <th class="text-right">Share</th>
-                          <!--   <th class="text-right hidden-xs hidden-sm">Type</th> -->
-                            <th class="text-right hidden-sm">CreatedOn</th>
+                            <th class="">Name</th>
+                            <th class="">Qns</th>                       
+                            <!-- <th class="text-right hidden-xs hidden-sm">CreatedOn</th> -->
                             <th class="text-right"></th>
-                            <th class="text-right">Analytics</th>
+                            <th class="text-right hidden-xs hidden-sm">Share</th>
                             <th class="text-right"></th>
                         </tr>
                     </thead>
                     <tbody>
-
-
                         {{#each getpolllist}}
                         <tr>
                             <td data-title="Code">{{incremented @index}}</td>
                             <td data-title="Name">{{name}}</td>
-                             <td data-title="Name">{{questioncount}}</td>
-                            <td data-title="Price" class="text-right">{{share}}</td>
+                            <td data-title="Name">{{questioncount}}</td>
+                            <!-- <td data-title="Price" class="text-right hidden-xs hidden-sm">{{share}}</td> -->
                             <!-- <td data-title="Change" class="text-right hidden-xs hidden-sm">{{type}}</td> -->
-                            <td data-title="Change %" class="text-right hidden-sm">{{livestamp summitted}}</td>
-                            <td data-title="" class="text-right">
-                                <!-- <div class="testqrcode" data-qrcode="{{getqrcode _id}}"></div> -->
+                            <!-- <td data-title="Change %" class="text-right hidden-xs hidden-sm">{{livestamp summitted}}</td> -->
+                            <!-- <td data-title="" class="text-right">                              
                                 <div class="link"><a href="../pollrespondentitem/{{ _id}}"><img src="../website/img/link.png" width="20" height="20" /></a></div>
-                            </td>
+                            </td> -->
+                            
                             <td data-title="Change %" class="text-right">
-                           
-                                <!-- {{> tinyanalytics _id}} -->
-
-                                <a href="/pollresponse/{{_id}}">Response</a>
-                            </td>
-                            <td data-title="Change %" class="text-right">
-                             
-
-                               <!--  <button type="button" id="{{_id}}" class="btn edit-poll btn-success btn-sm pull-right" title="edit" aria-label="Left Align" value="Add Option">
+                                <!--  <button type="button" id="{{_id}}" class="btn edit-poll btn-success btn-sm pull-right" title="edit" aria-label="Left Align" value="Add Option">
                                     <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Edit
                                 </button> -->
                                 <button type="button" id="{{_id}}" class="btn add-question btn-success btn-sm pull-right" title="edit" aria-label="Left Align" value="Add Option">
                                     <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Add Question
                                 </button>
-
-                                <button  type="button" id="{{_id}}" class="btn delete-poll btn-warning btn-sm pull-right" title="delete" aria-label="Left Align" value="Add Option">
+                                <button type="button" id="{{_id}}" class="btn delete-poll btn-warning btn-sm pull-right" title="delete" aria-label="Left Align" value="Add Option">
                                     <span class="glyphicon glyphicon-delete" aria-hidden="true"></span>Delete
                                 </button>
-
                             </td>
-                            
+                            <td data-title="" class="text-right">
+                                
+                                <a href="../pollrespondentitem/{{ _id}}"><img src="../website/img/link.png" width="30" height="30" /></a>
+                               
+                                <a href="{{sharefb _id}}" target="_blank" class="btn btn-facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="{{sharetwitter _id}}" target="_blank" class="btn btn-twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="{{shareg _id}}" target="_blank" class="btn btn-google-plus">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </td>
+
+                            <td data-title="Change %" class="text-right">
+                                <!-- {{> tinyanalytics _id}} -->
+                                <a href="/pollresponse/{{_id}}">Result</a>
+                            </td>
                         </tr>
                         {{/each}}
                     </tbody>
                 </table>
             </div>
-               <!--  {{else}}
+            <!--  {{else}}
                     No questions exists. Please add questions
             {{/if}} -->
         </div>
     </div>
 </template>
-

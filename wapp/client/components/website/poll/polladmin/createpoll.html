@@ -1,38 +1,27 @@
 <template name="createpoll">
     {{#if loggingIn}} {{> loading}} {{else}} {{#if currentUser}}
     <div role="main" class="main">
-            <section class="page-header">
-            <div class="container">              
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1>Polling</h1>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <h2 class="mb-sm mt-sm center"><strong>Polling</strong></h2>
         <div class="container">
             <div class="row">
-                <div class="col-md-4 ">              
+                <div class="col-md-4 ">
                     <p>
-                        <span class="alternative-font">Wapp-Poll</span> is a free online survey, which has Public and Private mode and has form and poll generator that helps users build what they need with minimal tech knowledge. The application simplifies the process while giving the user numerous features and customization options. Users can create styles, which are saved and used as templates so each new poll or form doesn’t have to be redesigned. 
-                        </p><br/>
+                        <span class="alternative-font">Wapp-Poll</span> is a free online survey, which has Public and Private mode and has form and poll generator that helps users build what they need with minimal tech knowledge. The application simplifies the process while giving the user numerous features and customization options. Users can create styles, which are saved and used as templates so each new poll or form doesn’t have to be redesigned.
+                    </p>
+                    <br/>
                 </div>
                 <div class="col-md-7 col-md-offset-1">
-                     {{> newPoll}}
-                                 
-            </div>
+                    {{> newPoll}}
+                </div>
             </div>
         </div>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                      {{> currentpolls}}              
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11 col-md-offset-1">
+                    {{> currentpolls}}
+                </div>
             </div>
         </div>
     </div>
-     </div>
     {{else}} {{> login}} {{/if}} {{/if}}
-
 </template>

@@ -10,6 +10,17 @@ Template.currentpolls.helpers({
     getpolllistcount: function() {
         return Polls.find({ 'userid': Meteor.user()._id }).count();
     },
+
+    sharefb: function(id) {
+        return "https://www.facebook.com/sharer/sharer.php?&u="+Meteor.absoluteUrl()+'pollrespondentitem/'+id;
+    },
+     sharetwitter: function(id) {
+        return "https://twitter.com/intent/tweet?url="+Meteor.absoluteUrl()+'pollrespondentitem/'+id;
+    },
+     shareg: function(id) {
+        return "https://plus.google.com/share?url="+Meteor.absoluteUrl()+'pollrespondentitem/'+id;
+    },
+
     // nonZeroQuestionaires:function(){
     //     return Polls.find({'userid':Meteor.user()._id}).count>0;      
     // },
