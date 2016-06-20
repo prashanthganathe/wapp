@@ -69,13 +69,14 @@ Accounts.onCreateUser(function(options, user) {
     //Send WelcomeEmail
     //  Meteor.call('SendWelcomeMail',user.profile.email);
     console.log(user);
-    if(Meteor.absoluteUrl()=="http://localhost:4000/" || Meteor.absoluteUrl()=="http://localhost:3000")
+    console.log(Meteor.absoluteUrl());
+   /* if(Meteor.absoluteUrl()=="http://localhost:4000/" || Meteor.absoluteUrl()=="http://localhost:3000")
         return user;
-    else
-    {
+    else*/
+   // {
         Meteor.call('SendWelcomeMail', user.profile.email, user);
         return user;
-    }   
+   // }   
 
 
 });

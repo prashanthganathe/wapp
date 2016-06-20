@@ -1,3 +1,6 @@
+
+
+
 sudo nohup meteor --port 80 --production &
 
 
@@ -80,6 +83,21 @@ sudo adduser wappadmin
 sudo visudo
 
 node- v
+
+======================================================================
+Swap issue in Ec2
+
+free -m
+
+sudo fallocate -l 4G /swapfile   Create a 4 gigabyte swapfile
+sudo chmod 600 /swapfile Secure the swapfile by restricting access to root
+sudo mkswap /swapfile Mark the file as a swap space
+sudo swapon /swapfile Enable the swap
+
+mongo
+===========================
+ps wuax | grep mongo
+sudo kill pid
 
 ===============================================================================
 1. Wapp logo

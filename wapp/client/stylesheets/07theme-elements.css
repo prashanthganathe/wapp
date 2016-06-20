@@ -4312,7 +4312,7 @@ html.boxed .pricing-table .plan, html.boxed .pricing-table h3 {
 .feature-box .feature-box-icon {
 	background: #CCC;
 	border-radius: 35px;
-	color: #FFF;
+	color: blue;
 	display: inline-block;
 	float: left;
 	height: 35px;
@@ -4322,6 +4322,7 @@ html.boxed .pricing-table .plan, html.boxed .pricing-table h3 {
 	text-align: center;
 	top: 5px;
 	width: 35px;
+
 }
 
 .feature-box .feature-box-info {

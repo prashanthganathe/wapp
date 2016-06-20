@@ -36,8 +36,8 @@ spacebars
 check
 accounts-facebook
 accounts-google
-service-configuration
 mrt:google-contacts
+accounts-base
 
 reywood:publish-composite
 pcel:loading
@@ -80,7 +80,7 @@ summernote:summernote
 
 meteorhacks:kadira
 johannesma:meteor-flexslider
-accounts-base
+
 peerlibrary:aws-sdk
 session
 steeve:jquery-qrcode
@@ -93,3 +93,4 @@ less
 lepozepo:s3
 webtempest:animate
 copleykj:livestamp
+service-configuration

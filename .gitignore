@@ -2,3 +2,5 @@
 /wapp/server/smtp.js
 /wapp/server/social-config.js
 /wapp/server/s3/s3config.js
+/wapp/server/config.js
+/wapp/server/startup/mailgun.js
